@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  background: var(--token-xNv4NilEXhqh);
+  min-width: 0;
+}
+.text {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: auto;
+  color: var(--token-jgohepLVeKvh);
+  font-size: 18px;
+  font-weight: 600;
+  transition-property: all;
+  transition-duration: 1s;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
+}
+.root:hover .text {
+  color: var(--token-rvqSfmjWOZ82);
+  border-bottom: 2px solid var(--token-rvqSfmjWOZ82);
+}
+.root:hover:active .text {
+  color: var(--token-rvqSfmjWOZ82);
+  border-bottom: 1px solid var(--token-rvqSfmjWOZ82);
+}

@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.img {
+  object-fit: cover;
+  width: auto;
+  height: 40px;
+}
+.img > picture > img {
+  object-fit: cover;
+}
+.img_50Opaque {
+  opacity: 0.5;
+}
+.imgwhiteLarge {
+  height: 60px;
+}

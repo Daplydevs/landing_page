@@ -9,7 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.3.6",
+    "@ant-design/pro-components": "^2.6.4",
     "@plasmicapp/loader-nextjs": "^1.0.365",
+    "@plasmicapp/react-web": "^0.2.326",
+    "@plasmicpkgs/antd5": "^0.0.222",
+    "@plasmicpkgs/plasmic-basic-components": "^0.0.210",
+    "@plasmicpkgs/plasmic-cms": "^0.0.252",
+    "@plasmicpkgs/plasmic-embed-css": "^0.1.176",
+    "@plasmicpkgs/plasmic-nav": "^0.0.161",
+    "@plasmicpkgs/plasmic-query": "^0.0.209",
+    "@plasmicpkgs/plasmic-rich-components": "^1.0.180",
+    "@plasmicpkgs/react-awesome-reveal": "^3.8.192",
+    "@plasmicpkgs/react-scroll-parallax": "^0.0.198",
+    "@plasmicpkgs/react-youtube": "^7.13.195",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18"

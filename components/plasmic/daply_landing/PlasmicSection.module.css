@@ -1,0 +1,54 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 64px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .root {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.rootbackground_dark {
+  background: var(--token-PHaAyVJD20_G);
+}
+.rootbackground_gray {
+  background: var(--token-0U81vTZs--Nk);
+}
+.freeBox {
+  max-width: var(--token-t6-EceW3Iy35);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background: none;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 0;
+  margin-top: calc(0px - 10px);
+  height: calc(100% + 10px);
+}
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 10px;
+}
+.freeBoxsize_fullContentWidth {
+  max-width: none;
+}
