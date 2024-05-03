@@ -68,6 +68,8 @@ import CallToActionSection from "../../CallToActionSection"; // plasmic-import: 
 import Button from "../../Button"; // plasmic-import: dBCQUhJCSZs2/component
 import FooterSection from "../../FooterSection"; // plasmic-import: 7rGOkW3yxftm/component
 
+import { useScreenVariants as useScreenVariantseatfCtt4BrEn } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: eatfCTT4BrEN/globalVariant
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -152,6 +154,10 @@ function PlasmicHomepage3__RenderFunc(props: {
     $refs
   });
 
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantseatfCtt4BrEn()
+  });
+
   return (
     <React.Fragment>
       <Head>
@@ -195,13 +201,13 @@ function PlasmicHomepage3__RenderFunc(props: {
           <div className={classNames(projectcss.all, sty.freeBox__iUmsD)}>
             <Navbar
               className={classNames("__wab_instance", sty.navbar__lzZwy)}
-              newsHeader={"dark"}
+              colors={"dark"}
             />
 
             <Navbar
               className={classNames("__wab_instance", sty.navbar___6EU4G)}
+              colors={"dark"}
               newsCategory={true}
-              newsHeader={"dark"}
             />
           </div>
           <CmsQueryRepeater

@@ -253,6 +253,7 @@
   height: auto;
   flex-shrink: 1;
   min-width: 0;
+  --plsmc-rc-col-gap: 0px;
 }
 .columns > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -273,9 +274,6 @@
   > picture
   > img {
   margin-left: 48px;
-}
-.columns {
-  --plsmc-rc-col-gap: 0px;
 }
 .columns > :global(.__wab_flex-container) > :nth-child(4n + 1) {
   width: calc((100% - 4 * var(--plsmc-rc-col-gap, 0px)) * 3 / 12);

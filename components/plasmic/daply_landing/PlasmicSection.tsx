@@ -69,11 +69,11 @@ import sty from "./PlasmicSection.module.css"; // plasmic-import: Rmg4dgTCPBXZ/c
 createPlasmicElementProxy;
 
 export type PlasmicSection__VariantMembers = {
-  background: "dark" | "gray";
+  background: "dark" | "gray" | "white";
   size: "fullContentWidth";
 };
 export type PlasmicSection__VariantsArgs = {
-  background?: SingleChoiceArg<"dark" | "gray">;
+  background?: SingleChoiceArg<"dark" | "gray" | "white">;
   size?: SingleChoiceArg<"fullContentWidth">;
 };
 type VariantPropType = keyof PlasmicSection__VariantsArgs;
@@ -89,13 +89,13 @@ type ArgPropType = keyof PlasmicSection__ArgsType;
 export const PlasmicSection__ArgProps = new Array<ArgPropType>("children");
 
 export type PlasmicSection__OverridesType = {
-  root?: Flex__<"div">;
+  white?: Flex__<"div">;
   freeBox?: Flex__<"div">;
 };
 
 export interface DefaultSectionProps {
   children?: React.ReactNode;
-  background?: SingleChoiceArg<"dark" | "gray">;
+  background?: SingleChoiceArg<"dark" | "gray" | "white">;
   size?: SingleChoiceArg<"fullContentWidth">;
   className?: string;
 }
@@ -157,8 +157,8 @@ function PlasmicSection__RenderFunc(props: {
 
   return (
     <div
-      data-plasmic-name={"root"}
-      data-plasmic-override={overrides.root}
+      data-plasmic-name={"white"}
+      data-plasmic-override={overrides.white}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
@@ -169,11 +169,16 @@ function PlasmicSection__RenderFunc(props: {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root,
+        sty.white,
         {
-          [sty.rootbackground_dark]: hasVariant($state, "background", "dark"),
-          [sty.rootbackground_gray]: hasVariant($state, "background", "gray"),
-          [sty.rootsize_fullContentWidth]: hasVariant(
+          [sty.whitebackground_dark]: hasVariant($state, "background", "dark"),
+          [sty.whitebackground_gray]: hasVariant($state, "background", "gray"),
+          [sty.whitebackground_white]: hasVariant(
+            $state,
+            "background",
+            "white"
+          ),
+          [sty.whitesize_fullContentWidth]: hasVariant(
             $state,
             "size",
             "fullContentWidth"
@@ -204,14 +209,14 @@ function PlasmicSection__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox"],
+  white: ["white", "freeBox"],
   freeBox: ["freeBox"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  root: "div";
+  white: "div";
   freeBox: "div";
 };
 
@@ -262,7 +267,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "white") {
     func.displayName = "PlasmicSection";
   } else {
     func.displayName = `PlasmicSection.${nodeName}`;
@@ -272,7 +277,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicSection = Object.assign(
   // Top-level PlasmicSection renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("white"),
   {
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),

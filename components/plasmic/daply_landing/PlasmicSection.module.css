@@ -1,4 +1,4 @@
-.root {
+.white {
   display: inline-flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -9,16 +9,19 @@
   padding: 64px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .root {
+  .white {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
-.rootbackground_dark {
+.whitebackground_dark {
   background: var(--token-PHaAyVJD20_G);
 }
-.rootbackground_gray {
+.whitebackground_gray {
   background: var(--token-0U81vTZs--Nk);
+}
+.whitebackground_white {
+  background: #ffffff;
 }
 .freeBox {
   max-width: var(--token-t6-EceW3Iy35);

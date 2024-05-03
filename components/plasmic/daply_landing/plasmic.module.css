@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&display=swap");
 
 .plasmic_tokens {
-  --token-rvqSfmjWOZ82: #007aff;
+  --token-rvqSfmjWOZ82: #4162ff;
   --plasmic-token-blue: var(--token-rvqSfmjWOZ82);
   --token-t6-EceW3Iy35: 1080px;
   --plasmic-token-content-max-width: var(--token-t6-EceW3Iy35);
@@ -41,6 +41,8 @@
   --plasmic-token-daply-dark: var(--token-xNv4NilEXhqh);
   --token-QOTKBU5U2dd3: #1c1c1c;
   --plasmic-token-light-black: var(--token-QOTKBU5U2dd3);
+  --token-EE1ua_Hy5Lub: #e4f1ff;
+  --plasmic-token-daply-blue-light: var(--token-EE1ua_Hy5Lub);
 }
 
 .plasmic_tokens {

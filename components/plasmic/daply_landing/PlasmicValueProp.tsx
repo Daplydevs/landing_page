@@ -74,6 +74,7 @@ export type PlasmicValueProp__VariantMembers = {
   card: "card";
   noTitle: "noTitle";
   darkBackground: "darkBackground";
+  colored: "colored";
 };
 export type PlasmicValueProp__VariantsArgs = {
   flatIcon?: SingleBooleanChoiceArg<"flatIcon">;
@@ -81,6 +82,7 @@ export type PlasmicValueProp__VariantsArgs = {
   card?: SingleBooleanChoiceArg<"card">;
   noTitle?: SingleBooleanChoiceArg<"noTitle">;
   darkBackground?: SingleBooleanChoiceArg<"darkBackground">;
+  colored?: SingleBooleanChoiceArg<"colored">;
 };
 type VariantPropType = keyof PlasmicValueProp__VariantsArgs;
 export const PlasmicValueProp__VariantProps = new Array<VariantPropType>(
@@ -88,7 +90,8 @@ export const PlasmicValueProp__VariantProps = new Array<VariantPropType>(
   "vertical",
   "card",
   "noTitle",
-  "darkBackground"
+  "darkBackground",
+  "colored"
 );
 
 export type PlasmicValueProp__ArgsType = {
@@ -118,6 +121,7 @@ export interface DefaultValuePropProps {
   card?: SingleBooleanChoiceArg<"card">;
   noTitle?: SingleBooleanChoiceArg<"noTitle">;
   darkBackground?: SingleBooleanChoiceArg<"darkBackground">;
+  colored?: SingleBooleanChoiceArg<"colored">;
   className?: string;
 }
 
@@ -183,6 +187,12 @@ function PlasmicValueProp__RenderFunc(props: {
         type: "private",
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.darkBackground
+      },
+      {
+        path: "colored",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.colored
       }
     ],
     [$props, $ctx, $refs]
@@ -216,6 +226,7 @@ function PlasmicValueProp__RenderFunc(props: {
           [sty.rootcard_vertical]:
             hasVariant($state, "card", "card") &&
             hasVariant($state, "vertical", "vertical"),
+          [sty.rootcolored]: hasVariant($state, "colored", "colored"),
           [sty.rootflatIcon]: hasVariant($state, "flatIcon", "flatIcon"),
           [sty.rootnoTitle]: hasVariant($state, "noTitle", "noTitle"),
           [sty.rootvertical]: hasVariant($state, "vertical", "vertical")

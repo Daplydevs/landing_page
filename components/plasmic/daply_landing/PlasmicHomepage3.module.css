@@ -5,6 +5,8 @@
   width: 100%;
   height: 100%;
   background: #000000;
+  align-items: flex-start;
+  justify-content: flex-start;
   min-width: 0;
   min-height: 0;
 }
@@ -26,8 +28,14 @@
 .navbar___6EU4G:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-  width: auto;
+  width: 100%;
   align-self: flex-start;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .navbar___6EU4G:global(.__wab_instance) {
+    display: none;
+  }
 }
 .cmsDataFetcher__jI0Sp:global(.__wab_instance) {
   width: 100%;
@@ -38,20 +46,27 @@
   position: relative;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .cmsDataFetcher__jI0Sp:global(.__wab_instance) {
+    max-width: 100%;
+  }
+}
 .freeBox__qKa1 {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%;
   height: auto;
-  max-width: 100%;
+  flex-shrink: 1;
+  width: 100%;
   min-width: 0;
   padding: 16px;
 }
 .freeBox__qKa1 > :global(.__wab_flex-container) {
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  align-content: stretch;
   min-width: 0;
   margin-top: calc(0px - 15px);
   height: calc(100% + 15px);
@@ -80,7 +95,13 @@
   height: auto;
   max-width: 100%;
   color: var(--token-jgohepLVeKvh);
+  font-size: 60px;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .h1 {
+    font-size: 40px;
+  }
 }
 .h4__q7YDg {
   width: 100%;
@@ -202,7 +223,7 @@
   flex-direction: column;
   width: 100%;
   height: auto;
-  max-width: 70%;
+  max-width: 100%;
   min-width: 0;
   padding: 20px;
 }
@@ -279,6 +300,11 @@
   position: relative;
   width: 100%;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .blogCardLeft__i6Hdt:global(.__wab_instance) {
+    max-width: 100%;
+  }
 }
 .text___1H5Q5 {
   position: relative;
@@ -418,6 +444,8 @@
 }
 .callToActionSection:global(.__wab_instance) {
   position: relative;
+  width: 100%;
+  min-width: 0;
 }
 .freeBox__bwWuK {
   display: flex;
@@ -518,6 +546,14 @@
 }
 .footerSection:global(.__wab_instance) {
   position: relative;
+  width: 100%;
+  min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .footerSection:global(.__wab_instance) {
+    width: 100%;
+    min-width: 0;
+  }
 }
 .text__rFtLl {
   position: relative;

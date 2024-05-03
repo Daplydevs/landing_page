@@ -59,19 +59,14 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import { NavigationBar } from "@plasmicpkgs/plasmic-nav";
+import Navbar from "../../Navbar"; // plasmic-import: l9zB0gKjLGnY/component
 import Button from "../../Button"; // plasmic-import: dBCQUhJCSZs2/component
-import SignUpPrompt from "../../SignUpPrompt"; // plasmic-import: NOJgg_Sy_SDB/component
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import Section from "../../Section"; // plasmic-import: Rmg4dgTCPBXZ/component
 import ValueProp from "../../ValueProp"; // plasmic-import: b8UA6WVbb5xL/component
-import PriceCard from "../../PriceCard"; // plasmic-import: g3CxlUrNVWAd/component
-import Banner from "../../Banner"; // plasmic-import: -2zftpqT-X-k/component
 import { AntdAccordion } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { accordionHelpers as AntdAccordion_Helpers } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { AntdAccordionItem } from "@plasmicpkgs/antd5/skinny/registerCollapse";
-import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
-import Testimonial from "../../Testimonial"; // plasmic-import: RF-Yj1fkCKhf/component
-import CallToActionSection from "../../CallToActionSection"; // plasmic-import: JbYIy_ldO41D/component
 import FooterSection from "../../FooterSection"; // plasmic-import: 7rGOkW3yxftm/component
 
 import { useScreenVariants as useScreenVariantseatfCtt4BrEn } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: eatfCTT4BrEN/globalVariant
@@ -85,7 +80,10 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: trPESwWzhIQ/c
 
 import AppleIcon from "./icons/PlasmicIcon__Apple"; // plasmic-import: 563f33iyx-K3/icon
 import ChevronRightIcon from "./icons/PlasmicIcon__ChevronRight"; // plasmic-import: HEPvTyIN4GhK/icon
-import CheckIcon from "./icons/PlasmicIcon__Check"; // plasmic-import: nEIP81smXuD5/icon
+import CircleNodesDuotone1SvgIcon from "./icons/PlasmicIcon__CircleNodesDuotone1Svg"; // plasmic-import: BPlNUGzXlC5h/icon
+import NewspaperDuotone1SvgIcon from "./icons/PlasmicIcon__NewspaperDuotone1Svg"; // plasmic-import: g1f9Vb9J7OUg/icon
+import BullseyePointerDuotonesvgIcon from "./icons/PlasmicIcon__BullseyePointerDuotonesvg"; // plasmic-import: bZ2badIKOcLx/icon
+import EarthAmericasDuotonesvgIcon from "./icons/PlasmicIcon__EarthAmericasDuotonesvg"; // plasmic-import: H6Xnyi942ZBg/icon
 
 createPlasmicElementProxy;
 
@@ -100,19 +98,12 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  navigationBar?: Flex__<typeof NavigationBar>;
-  signup?: Flex__<typeof Button>;
+  navbar?: Flex__<typeof Navbar>;
   headerHeroSection?: Flex__<"div">;
-  signUpPrompt?: Flex__<typeof SignUpPrompt>;
   valuePropsSection?: Flex__<typeof Section>;
-  pricingSection?: Flex__<typeof Section>;
-  shopBannersSection?: Flex__<typeof Section>;
   logoCloudSection?: Flex__<typeof Section>;
   faqSection?: Flex__<typeof Section>;
   accordion2?: Flex__<typeof AntdAccordion>;
-  scrollParallax?: Flex__<typeof ParallaxWrapper>;
-  testimonialsSection?: Flex__<typeof Section>;
-  callToActionSection?: Flex__<typeof CallToActionSection>;
   footerSection?: Flex__<typeof FooterSection>;
 };
 
@@ -155,7 +146,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "accordion2.activePanelId",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => "1",
 
         onMutate: generateOnMutateForSpec(
           "activePanelId",
@@ -224,156 +215,23 @@ function PlasmicHomepage__RenderFunc(props: {
             )}
             id={"topNav"}
           >
-            <NavigationBar
-              data-plasmic-name={"navigationBar"}
-              data-plasmic-override={overrides.navigationBar}
-              brand={
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__mz2Uh
-                  )}
-                  component={Link}
-                  href={"#"}
-                  platform={"nextjs"}
-                >
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__phWf3)}
-                    displayHeight={"40px"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"none"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"auto"}
-                    src={{
-                      src: "/plasmic/daply_landing/images/daplyLogoBlackpng.png",
-                      fullWidth: 540,
-                      fullHeight: 190,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </PlasmicLink__>
-              }
-              className={classNames("__wab_instance", sty.navigationBar)}
-              closeButton={
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__phYiz)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"none"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  src={"https://static1.plasmic.app/close.svg"}
-                />
-              }
-              itemsGap={8}
-              menuItems={
-                <React.Fragment>
-                  <PlasmicLink__
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      projectcss.__wab_text,
-                      sty.link__oDxd
-                    )}
-                    component={Link}
-                    href={"/"}
-                    platform={"nextjs"}
-                  >
-                    {"Home"}
-                  </PlasmicLink__>
-                  <PlasmicLink__
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      projectcss.__wab_text,
-                      sty.link__n1ANg
-                    )}
-                    component={Link}
-                    href={"/"}
-                    platform={"nextjs"}
-                  >
-                    {"About"}
-                  </PlasmicLink__>
-                  <PlasmicLink__
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      projectcss.__wab_text,
-                      sty.link__yifF3
-                    )}
-                    component={Link}
-                    href={"/"}
-                    platform={"nextjs"}
-                  >
-                    {"Contact"}
-                  </PlasmicLink__>
-                  <Button
-                    data-plasmic-name={"signup"}
-                    data-plasmic-override={overrides.signup}
-                    className={classNames("__wab_instance", sty.signup)}
-                    color2={"blue"}
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["updateStateVariable"] = true
-                        ? (() => {
-                            const actionArgs = {};
-                            return (({
-                              variable,
-                              value,
-                              startIndex,
-                              deleteCount
-                            }) => {
-                              if (!variable) {
-                                return;
-                              }
-                              const { objRoot, variablePath } = variable;
-                              undefined;
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["updateStateVariable"] != null &&
-                        typeof $steps["updateStateVariable"] === "object" &&
-                        typeof $steps["updateStateVariable"].then === "function"
-                      ) {
-                        $steps["updateStateVariable"] = await $steps[
-                          "updateStateVariable"
-                        ];
-                      }
-                    }}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___5H2Md
-                      )}
-                    >
-                      {"Open App"}
-                    </div>
-                  </Button>
-                </React.Fragment>
-              }
-              openButton={
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img___7VUb)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"none"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  src={"https://static1.plasmic.app/menu.svg"}
-                />
-              }
-              responsiveBreakpoint={768}
+            <Navbar
+              data-plasmic-name={"navbar"}
+              data-plasmic-override={overrides.navbar}
+              className={classNames("__wab_instance", sty.navbar)}
+              scrolled={(() => {
+                try {
+                  return $ctx.isScrolled;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return [];
+                  }
+                  throw e;
+                }
+              })()}
             />
           </div>
           <Stack__
@@ -409,7 +267,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.text__rOaoc
                         )}
                       >
-                        {"Updated!"}
+                        {"v1.3 Now Live"}
                       </div>
                     </div>
                     <div
@@ -496,10 +354,19 @@ function PlasmicHomepage__RenderFunc(props: {
                 </Stack__>
               </div>
               <div className={classNames(projectcss.all, sty.column___240P)}>
-                <SignUpPrompt
-                  data-plasmic-name={"signUpPrompt"}
-                  data-plasmic-override={overrides.signUpPrompt}
-                  className={classNames("__wab_instance", sty.signUpPrompt)}
+                <div className={classNames(projectcss.all, sty.freeBox__nl4Wp)}>
+                  <Embed
+                    className={classNames(
+                      "__wab_instance",
+                      sty.embedHtml__woxf3
+                    )}
+                  />
+                </div>
+                <Embed
+                  className={classNames("__wab_instance", sty.embedHtml__tL4P0)}
+                  code={
+                    '<iframe class="rounded-iframe" data-tally-src="https://tally.so/embed/wg5WLM?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="Start scaling your content today"></iframe>\r\n\r\n<script>\r\n    var d = document,\r\n        w = "https://tally.so/widgets/embed.js",\r\n        v = function () {\r\n            "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) {\r\n                e.src = e.dataset.tallySrc\r\n            }))\r\n        };\r\n    if ("undefined" != typeof Tally) v();\r\n    else if (d.querySelector(\'script[src="\' + w + \'"]\') == null) {\r\n        var s = d.createElement("script");\r\n        s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s)\r\n    };\r\n</script>\r\n\r\n<style>\r\n    .rounded-iframe {\r\n        border-radius: 10px;\r\n        overflow: hidden;\r\n    }\r\n</style>\r\n'
+                  }
                 />
               </div>
             </Stack__>
@@ -507,7 +374,7 @@ function PlasmicHomepage__RenderFunc(props: {
           <Section
             data-plasmic-name={"valuePropsSection"}
             data-plasmic-override={overrides.valuePropsSection}
-            background={"gray"}
+            background={"white"}
             className={classNames("__wab_instance", sty.valuePropsSection)}
             size={"fullContentWidth"}
           >
@@ -525,7 +392,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     sty.h2__mKMsT
                   )}
                 >
-                  {"Proposing values"}
+                  {"Scale your content effortlessly"}
                 </h2>
               </div>
               <div
@@ -539,676 +406,159 @@ function PlasmicHomepage__RenderFunc(props: {
                   "Consectetur a adipiscing sagittis sed proin libero himenaeos ornare adipiscing suscipit leo vestibulum facilisi consequat nisi nisi adipiscing habitant facilisis suspendisse hac integer eget quam facilisis sem placerat fames."
                 }
               </div>
-            </Stack__>
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__oq1Jg)}
-            >
               <Stack__
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__ipoZy)}
+                className={classNames(projectcss.all, sty.freeBox__li3Ns)}
               >
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__mwUfr)}
-                  description={
-                    "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
-                  }
-                  flatIcon={true}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__umOWr)}
-                      role={"img"}
-                    />
-                  }
-                  title={"Aggregate Data Sources"}
-                  vertical={true}
-                />
-
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__yqk44)}
-                  description={
-                    "Consequat scelerisque a eros taciti nisl a sodales."
-                  }
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__dbmRu)}
-                      role={"img"}
-                    />
-                  }
-                  title={"Scale Content"}
-                  vertical={true}
-                />
-
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__hx62Z)}
-                  description={"At ut condimentum amet adipiscing ac diam a."}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__eBiWy)}
-                      role={"img"}
-                    />
-                  }
-                  title={"Increase Ad Revenue"}
-                  vertical={true}
-                />
-
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__wxb7N)}
-                  description={
-                    "Donec purus nec vestibulum volutpat vivamus vulputate suspendisse."
-                  }
-                  flatIcon={true}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__jv1F)}
-                      role={"img"}
-                    />
-                  }
-                  title={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__vCzxf
-                      )}
-                    >
-                      {"Increase your Ad Revenue and Funnels"}
-                    </div>
-                  }
-                  vertical={true}
-                />
-              </Stack__>
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__zq5T)}
-              >
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__yjTwu)}
-                  description={
-                    "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
-                  }
-                  flatIcon={true}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg___7DtZ)}
-                      role={"img"}
-                    />
-                  }
-                  title={"Manage Original Content Pipelines"}
-                  vertical={true}
-                />
-
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__loN9S)}
-                  description={
-                    "Consequat scelerisque a eros taciti nisl a sodales."
-                  }
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__kRioP)}
-                      role={"img"}
-                    />
-                  }
-                  title={"Customized AI eLearning"}
-                  vertical={true}
-                />
-
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__ipgG)}
-                  description={"At ut condimentum amet adipiscing ac diam a."}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg___372Eh)}
-                      role={"img"}
-                    />
-                  }
-                  title={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__l9K7F
-                      )}
-                    >
-                      {"Increase Traffic"}
-                    </div>
-                  }
-                  vertical={true}
-                />
-
-                <ValueProp
-                  className={classNames("__wab_instance", sty.valueProp__rnFhB)}
-                  description={
-                    "Donec purus nec vestibulum volutpat vivamus vulputate suspendisse."
-                  }
-                  flatIcon={true}
-                  icon={
-                    <CheckIcon
-                      className={classNames(projectcss.all, sty.svg__kV5Pd)}
-                      role={"img"}
-                    />
-                  }
-                  title={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__kZgY
-                      )}
-                    >
-                      {"Become Domain Authority"}
-                    </div>
-                  }
-                  vertical={true}
-                />
-              </Stack__>
-            </Stack__>
-          </Section>
-          <Section
-            data-plasmic-name={"pricingSection"}
-            data-plasmic-override={overrides.pricingSection}
-            background={"dark"}
-            className={classNames("__wab_instance", sty.pricingSection)}
-          >
-            <h2
-              className={classNames(
-                projectcss.all,
-                projectcss.h2,
-                projectcss.__wab_text,
-                sty.h2__sAJxS
-              )}
-            >
-              {"Pricing"}
-            </h2>
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox___5Mj2O)}
-            >
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__mUzUu)}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__zWrAo
-                  )}
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.columns__gbo8C)}
                 >
-                  {
-                    "Nascetur nascetur ridiculus scelerisque adipiscing a nascetur varius sed eu a ad semper a est nec litora ante at orci rhoncus a varius auctor aliquam inceptos vestibulum ridiculus."
-                  }
-                </div>
-              </Stack__>
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.columns__je1Mw)}
-              >
-                <div className={classNames(projectcss.all, sty.column__j7KG3)}>
-                  <PriceCard
-                    borders={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? []
-                        : ["flatRight"]
-                    }
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard__lFa6H
-                    )}
-                    description={
-                      <React.Fragment>
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__yNyhD
-                          )}
-                          description={
-                            "Vestibulum mollis odio dictum ultrices facilisis molestie vestibulum"
-                          }
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__re2Rz
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__u04V
-                          )}
-                          description={"Mus consequat a justo"}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg___3Fjog
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-                      </React.Fragment>
-                    }
-                    dollars={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__x26YJ
-                        )}
-                      >
-                        {"150"}
-                      </div>
-                    }
-                    label={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__g5UK4
-                        )}
-                      >
-                        {"Startup"}
-                      </div>
-                    }
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__v4Vxa)}>
-                  <PriceCard
-                    action={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__qtvkX
-                        )}
-                      >
-                        {"Buy pro"}
-                      </div>
-                    }
-                    borders={[]}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard__nwNb
-                    )}
-                    description={
-                      <React.Fragment>
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__bRxgS
-                          )}
-                          description={
-                            "Ligula primis mollis sem dignissim semper lectus parturient"
-                          }
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__eGups
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__vdVh8
-                          )}
-                          description={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__h3Rd
-                              )}
-                            >
-                              {"A curabitur dignissim pharetra porta suscipit"}
-                            </div>
-                          }
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__znpv8
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__xy0Az
-                          )}
-                          description={
-                            "Condimentum diam a et sapien praesent potenti torquent a eros"
-                          }
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__sAbko
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__hUguK
-                          )}
-                          description={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__hFcer
-                              )}
-                            >
-                              {"Conubia in hac eu elementum sodales"}
-                            </div>
-                          }
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__wis
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-                      </React.Fragment>
-                    }
-                    dollars={"350"}
-                    label={"Small CMS"}
-                    primary={true}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column___3CuM7)}>
-                  <PriceCard
-                    action={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__v1X9H
-                        )}
-                      >
-                        {"Buy team"}
-                      </div>
-                    }
-                    borders={
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? []
-                        : ["flatLeft"]
-                    }
-                    className={classNames(
-                      "__wab_instance",
-                      sty.priceCard__qDlCf
-                    )}
-                    description={
-                      <React.Fragment>
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__tByTg
-                          )}
-                          description={"Ad nam curae a potenti platea"}
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__hokL2
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-
-                        <ValueProp
-                          className={classNames(
-                            "__wab_instance",
-                            sty.valueProp__hh9Gl
-                          )}
-                          description={
-                            "A adipiscing scelerisque pretium consectetur sem"
-                          }
-                          flatIcon={true}
-                          icon={
-                            <CheckIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__ijGBp
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          noTitle={true}
-                        />
-                      </React.Fragment>
-                    }
-                    dollars={"Custom"}
-                    label={"Enterprise"}
-                  />
-                </div>
-              </Stack__>
-            </Stack__>
-          </Section>
-          <Section
-            data-plasmic-name={"shopBannersSection"}
-            data-plasmic-override={overrides.shopBannersSection}
-            className={classNames("__wab_instance", sty.shopBannersSection)}
-            size={"fullContentWidth"}
-          >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__xgym1)}
-            >
-              <Banner
-                className={classNames("__wab_instance", sty.banner__t7Rrv)}
-                image={{
-                  src: "/plasmic/daply_landing/images/sunglassesMale.jpg",
-                  fullWidth: 2851,
-                  fullHeight: 1900,
-                  aspectRatio: undefined
-                }}
-                left={
-                  <React.Fragment>
-                    <div
+                  <div
+                    className={classNames(projectcss.all, sty.column__r4UGk)}
+                  >
+                    <ValueProp
                       className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__jzxl
+                        "__wab_instance",
+                        sty.valueProp__mwUfr
                       )}
-                    >
-                      {"Sunglasses Collection"}
-                    </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__u4LKp
-                      )}
-                    >
-                      {"Get 25% off on selected items"}
-                    </div>
-                    <Button
-                      color2={"link"}
-                      endIcon={
-                        <ChevronRightIcon
-                          className={classNames(projectcss.all, sty.svg__teySy)}
+                      colored={true}
+                      description={
+                        "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
+                      }
+                      icon={
+                        <CircleNodesDuotone1SvgIcon
+                          className={classNames(projectcss.all, sty.svg__umOWr)}
                           role={"img"}
                         />
                       }
-                      flat={true}
-                      showEndIcon={true}
-                      submitsForm={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__pR6S
-                        )}
-                      >
-                        {"Go to collection"}
-                      </div>
-                    </Button>
-                  </React.Fragment>
-                }
-              />
-
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__hxGja)}
-              >
-                <Banner
-                  className={classNames("__wab_instance", sty.banner__byyQ1)}
-                  image={{
-                    src: "/plasmic/daply_landing/images/sneakers.jpg",
-                    fullWidth: 2850,
-                    fullHeight: 1900,
-                    aspectRatio: undefined
-                  }}
-                  left={
-                    <React.Fragment>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__fnUDp
-                        )}
-                      >
-                        {"Sneakers\nCollection"}
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___8LvdD
-                        )}
-                      >
-                        {"Get 25% off on selected items"}
-                      </div>
-                      <Button
-                        color2={"link"}
-                        endIcon={
-                          <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg___3B7Xo
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        flat={true}
-                        showEndIcon={true}
-                        submitsForm={true}
-                      >
+                      title={"Aggregated Data Sources"}
+                      vertical={true}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.column__oroAj)}
+                  >
+                    <ValueProp
+                      className={classNames(
+                        "__wab_instance",
+                        sty.valueProp__yqk44
+                      )}
+                      colored={true}
+                      description={
+                        "Consequat scelerisque a eros taciti nisl a sodales."
+                      }
+                      icon={
+                        <NewspaperDuotone1SvgIcon
+                          className={classNames(projectcss.all, sty.svg__dbmRu)}
+                          role={"img"}
+                        />
+                      }
+                      title={"Content Production Autopilot"}
+                      vertical={true}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.column__kwl2G)}
+                  >
+                    <ValueProp
+                      className={classNames(
+                        "__wab_instance",
+                        sty.valueProp__mpfn1
+                      )}
+                      colored={true}
+                      description={
+                        "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
+                      }
+                      icon={
+                        <CircleNodesDuotone1SvgIcon
+                          className={classNames(projectcss.all, sty.svg__ekm)}
+                          role={"img"}
+                        />
+                      }
+                      title={"Repacked Content"}
+                      vertical={true}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.column__wRwCu)}
+                  >
+                    <ValueProp
+                      className={classNames(
+                        "__wab_instance",
+                        sty.valueProp__o8YEi
+                      )}
+                      colored={true}
+                      description={
+                        "Consequat scelerisque a eros taciti nisl a sodales."
+                      }
+                      icon={
+                        <NewspaperDuotone1SvgIcon
+                          className={classNames(projectcss.all, sty.svg__qZbCo)}
+                          role={"img"}
+                        />
+                      }
+                      title={"Build Knowledge Products"}
+                      vertical={true}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.column__kqdur)}
+                  >
+                    <ValueProp
+                      className={classNames(
+                        "__wab_instance",
+                        sty.valueProp__zmdro
+                      )}
+                      colored={true}
+                      description={
+                        "At ut condimentum amet adipiscing ac diam a."
+                      }
+                      icon={
+                        <BullseyePointerDuotonesvgIcon
+                          className={classNames(projectcss.all, sty.svg__eh5CJ)}
+                          role={"img"}
+                        />
+                      }
+                      title={"Increase brand engagement"}
+                      vertical={true}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.column__yZv5J)}
+                  >
+                    <ValueProp
+                      className={classNames(
+                        "__wab_instance",
+                        sty.valueProp__wxb7N
+                      )}
+                      colored={true}
+                      description={
+                        "Donec purus nec vestibulum volutpat vivamus vulputate suspendisse."
+                      }
+                      icon={
+                        <EarthAmericasDuotonesvgIcon
+                          className={classNames(projectcss.all, sty.svg__jv1F)}
+                          role={"img"}
+                        />
+                      }
+                      title={
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__wJq0P
+                            sty.text__vCzxf
                           )}
                         >
-                          {"Go to collection"}
+                          {"Expand your audience reach"}
                         </div>
-                      </Button>
-                    </React.Fragment>
-                  }
-                />
-
-                <Banner
-                  className={classNames("__wab_instance", sty.banner__fhzRt)}
-                  image={{
-                    src: "/plasmic/daply_landing/images/shirtWoman.png",
-                    fullWidth: 1834,
-                    fullHeight: 2751,
-                    aspectRatio: undefined
-                  }}
-                  left={
-                    <React.Fragment>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__m0YC
-                        )}
-                      >
-                        {"Shirts\nCollection"}
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__p4DMj
-                        )}
-                      >
-                        {"Get 25% off on selected items"}
-                      </div>
-                      <Button
-                        color2={"link"}
-                        endIcon={
-                          <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__rcKtu
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        flat={true}
-                        showEndIcon={true}
-                        submitsForm={true}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__kjiYc
-                          )}
-                        >
-                          {"Go to collection"}
-                        </div>
-                      </Button>
-                    </React.Fragment>
-                  }
-                />
+                      }
+                      vertical={true}
+                    />
+                  </div>
+                </Stack__>
               </Stack__>
             </Stack__>
           </Section>
@@ -1311,6 +661,7 @@ function PlasmicHomepage__RenderFunc(props: {
           <Section
             data-plasmic-name={"faqSection"}
             data-plasmic-override={overrides.faqSection}
+            background={"white"}
             className={classNames("__wab_instance", sty.faqSection)}
           >
             <Stack__
@@ -1339,7 +690,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 ]),
                 bordered: false,
                 className: classNames("__wab_instance", sty.accordion2),
+                defaultActiveKey: "1",
                 disabled: false,
+                expandIconPosition: "start",
                 ghost: false,
                 items: (
                   <React.Fragment>
@@ -1408,7 +761,8 @@ function PlasmicHomepage__RenderFunc(props: {
                   "activePanelId",
                   ["accordion2", "activePanelId"],
                   AntdAccordion_Helpers
-                )
+                ),
+                size: "middle"
               };
               initializeCodeComponentStates(
                 $state,
@@ -1431,148 +785,12 @@ function PlasmicHomepage__RenderFunc(props: {
                 />
               );
             })()}
-            <ParallaxWrapper
-              data-plasmic-name={"scrollParallax"}
-              data-plasmic-override={overrides.scrollParallax}
-              className={classNames("__wab_instance", sty.scrollParallax)}
-              previewInEditor={true}
-              speed={20}
-            >
-              <h2
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h2,
-                  projectcss.__wab_text,
-                  sty.h2__kwRyl
-                )}
-              >
-                {"Common Questions"}
-              </h2>
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__rOqn)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                src={"https://placekitten.com/300/200"}
-              />
-            </ParallaxWrapper>
           </Section>
-          <Section
-            data-plasmic-name={"testimonialsSection"}
-            data-plasmic-override={overrides.testimonialsSection}
-            background={"gray"}
-            className={classNames("__wab_instance", sty.testimonialsSection)}
-          >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.columns___69OUg)}
-            >
-              <div className={classNames(projectcss.all, sty.column__qr3Gu)}>
-                <Testimonial
-                  className={classNames(
-                    "__wab_instance",
-                    sty.testimonial___7Jm3Y
-                  )}
-                  image={{
-                    src: "/plasmic/daply_landing/images/tracy.png",
-                    fullWidth: 500,
-                    fullHeight: 500,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__y3Xk)}>
-                <Testimonial
-                  className={classNames(
-                    "__wab_instance",
-                    sty.testimonial__vGc7J
-                  )}
-                  image={{
-                    src: "/plasmic/daply_landing/images/elaine.png",
-                    fullWidth: 460,
-                    fullHeight: 280,
-                    aspectRatio: undefined
-                  }}
-                  name={"Elaine Benes"}
-                  quote={
-                    <React.Fragment>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__qvlm5
-                        )}
-                      >
-                        {'"Vestibulum lacinia varius habitant dis aenean.'}
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__vtmSv
-                        )}
-                      >
-                        {
-                          'A parturient non ultricies a parturient leo a nascetur at consectetur turpis praesent mus ornare nulla posuere vel parturient."'
-                        }
-                      </div>
-                    </React.Fragment>
-                  }
-                  title={"Editor, Pendant Publishing"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__edNav)}>
-                <Testimonial
-                  className={classNames(
-                    "__wab_instance",
-                    sty.testimonial__zVaOt
-                  )}
-                  image={{
-                    src: "/plasmic/daply_landing/images/louis.jpg",
-                    fullWidth: 2249,
-                    fullHeight: 3000,
-                    aspectRatio: undefined
-                  }}
-                  name={"Louis Huang"}
-                  quote={
-                    '"Purus dis a primis rhoncus blandit velit suspendisse porta at ullamcorper suscipit a scelerisque sed pharetra facilisi vitae."'
-                  }
-                  title={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__mUCtJ
-                      )}
-                    >
-                      {"Restaurant Owner, Cattleman's Ranch"}
-                    </div>
-                  }
-                />
-              </div>
-            </Stack__>
-          </Section>
-          <CallToActionSection
-            data-plasmic-name={"callToActionSection"}
-            data-plasmic-override={overrides.callToActionSection}
-            className={classNames("__wab_instance", sty.callToActionSection)}
-            image={{
-              src: "/plasmic/daply_landing/images/meeting.jpg",
-              fullWidth: 2916,
-              fullHeight: 1787,
-              aspectRatio: undefined
-            }}
-          />
-
           <FooterSection
             data-plasmic-name={"footerSection"}
             data-plasmic-override={overrides.footerSection}
             className={classNames("__wab_instance", sty.footerSection)}
+            dark={true}
           />
         </div>
       </div>
@@ -1583,34 +801,20 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "navigationBar",
-    "signup",
+    "navbar",
     "headerHeroSection",
-    "signUpPrompt",
     "valuePropsSection",
-    "pricingSection",
-    "shopBannersSection",
     "logoCloudSection",
     "faqSection",
     "accordion2",
-    "scrollParallax",
-    "testimonialsSection",
-    "callToActionSection",
     "footerSection"
   ],
-  navigationBar: ["navigationBar", "signup"],
-  signup: ["signup"],
-  headerHeroSection: ["headerHeroSection", "signUpPrompt"],
-  signUpPrompt: ["signUpPrompt"],
+  navbar: ["navbar"],
+  headerHeroSection: ["headerHeroSection"],
   valuePropsSection: ["valuePropsSection"],
-  pricingSection: ["pricingSection"],
-  shopBannersSection: ["shopBannersSection"],
   logoCloudSection: ["logoCloudSection"],
-  faqSection: ["faqSection", "accordion2", "scrollParallax"],
+  faqSection: ["faqSection", "accordion2"],
   accordion2: ["accordion2"],
-  scrollParallax: ["scrollParallax"],
-  testimonialsSection: ["testimonialsSection"],
-  callToActionSection: ["callToActionSection"],
   footerSection: ["footerSection"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1618,19 +822,12 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  navigationBar: typeof NavigationBar;
-  signup: typeof Button;
+  navbar: typeof Navbar;
   headerHeroSection: "div";
-  signUpPrompt: typeof SignUpPrompt;
   valuePropsSection: typeof Section;
-  pricingSection: typeof Section;
-  shopBannersSection: typeof Section;
   logoCloudSection: typeof Section;
   faqSection: typeof Section;
   accordion2: typeof AntdAccordion;
-  scrollParallax: typeof ParallaxWrapper;
-  testimonialsSection: typeof Section;
-  callToActionSection: typeof CallToActionSection;
   footerSection: typeof FooterSection;
 };
 
@@ -1694,19 +891,12 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    navigationBar: makeNodeComponent("navigationBar"),
-    signup: makeNodeComponent("signup"),
+    navbar: makeNodeComponent("navbar"),
     headerHeroSection: makeNodeComponent("headerHeroSection"),
-    signUpPrompt: makeNodeComponent("signUpPrompt"),
     valuePropsSection: makeNodeComponent("valuePropsSection"),
-    pricingSection: makeNodeComponent("pricingSection"),
-    shopBannersSection: makeNodeComponent("shopBannersSection"),
     logoCloudSection: makeNodeComponent("logoCloudSection"),
     faqSection: makeNodeComponent("faqSection"),
     accordion2: makeNodeComponent("accordion2"),
-    scrollParallax: makeNodeComponent("scrollParallax"),
-    testimonialsSection: makeNodeComponent("testimonialsSection"),
-    callToActionSection: makeNodeComponent("callToActionSection"),
     footerSection: makeNodeComponent("footerSection"),
 
     // Metadata about props expected for PlasmicHomepage
@@ -1715,7 +905,7 @@ export const PlasmicHomepage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "Home",
+      title: "The Content Scaling Engine | Daply",
       description: "",
       ogImageSrc: "",
       canonical: ""

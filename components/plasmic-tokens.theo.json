@@ -3,7 +3,7 @@
     {
       "name": "Blue",
       "type": "color",
-      "value": "#007AFF",
+      "value": "#4162FF",
       "category": "color",
       "meta": {
         "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
@@ -18,6 +18,16 @@
       "meta": {
         "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
         "id": "t6-EceW3Iy35"
+      }
+    },
+    {
+      "name": "Daply Blue Light",
+      "type": "color",
+      "value": "#E4F1FF",
+      "category": "color",
+      "meta": {
+        "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+        "id": "EE1ua_Hy5Lub"
       }
     },
     {

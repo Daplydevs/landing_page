@@ -742,8 +742,7 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
@@ -752,20 +751,6 @@
       "version": "latest",
       "cssFilePath": "plasmic/daply_landing/plasmic.module.css",
       "components": [
-        {
-          "id": "trPESwWzhIQ",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
-          "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/index.tsx"
-          },
-          "cssFilePath": "plasmic/daply_landing/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/"
-        },
         {
           "id": "dSFGZAghdS5H",
           "name": "Services",
@@ -965,20 +950,6 @@
           "componentType": "component"
         },
         {
-          "id": "JcKsYpd3wFct",
-          "name": "NewPage",
-          "type": "managed",
-          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
-          "renderModuleFilePath": "plasmic/daply_landing/PlasmicNewPage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/new-page.tsx"
-          },
-          "cssFilePath": "plasmic/daply_landing/PlasmicNewPage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/new-page"
-        },
-        {
           "id": "kH8bUv2Ub609",
           "name": "BlogCard",
           "type": "managed",
@@ -990,20 +961,6 @@
           "cssFilePath": "plasmic/daply_landing/PlasmicBlogCard.module.css",
           "scheme": "blackbox",
           "componentType": "component"
-        },
-        {
-          "id": "tmPjnsAKrj-H",
-          "name": "Homepage2",
-          "type": "managed",
-          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
-          "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage2.tsx",
-          "importSpec": {
-            "modulePath": "../pages/new-page-2.tsx"
-          },
-          "cssFilePath": "plasmic/daply_landing/PlasmicHomepage2.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/new-page-2"
         },
         {
           "id": "loGveCNgEVMe",
@@ -1117,7 +1074,7 @@
           "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
           "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage4.tsx",
           "importSpec": {
-            "modulePath": "../pages/article-2/[title].tsx"
+            "modulePath": "../pages/news.tsx"
           },
           "cssFilePath": "plasmic/daply_landing/PlasmicHomepage4.module.css",
           "scheme": "blackbox",
@@ -1136,6 +1093,60 @@
           "cssFilePath": "plasmic/daply_landing/PlasmicBlogCardLeftNoImage.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "trPESwWzhIQ",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
+        },
+        {
+          "id": "RKAk0OF_rMnd",
+          "name": "Statistic",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicStatistic.tsx",
+          "importSpec": {
+            "modulePath": "Statistic.tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicStatistic.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "VTuWDQvMkgqx",
+          "name": "SignUpPrompt2",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicSignUpPrompt2.tsx",
+          "importSpec": {
+            "modulePath": "SignUpPrompt2.tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicSignUpPrompt2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "8jCy7A4X6uDj",
+          "name": "Checkbox",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicCheckbox.tsx",
+          "importSpec": {
+            "modulePath": "Checkbox.tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicCheckbox.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "checkbox"
         }
       ],
       "icons": [
@@ -1228,6 +1239,66 @@
           "id": "oUDFXeC9bRSg",
           "name": "CalendarDayssvgIcon",
           "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__CalendarDayssvg.tsx"
+        },
+        {
+          "id": "nNZZDS7yKXwA",
+          "name": "BoltDuotone1SvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__BoltDuotone1Svg.tsx"
+        },
+        {
+          "id": "ly9-Wi6vrAdN",
+          "name": "BullseyePointerDuotone1SvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__BullseyePointerDuotone1Svg.tsx"
+        },
+        {
+          "id": "z50QuSIkoBcH",
+          "name": "VideoDuotone1SvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__VideoDuotone1Svg.tsx"
+        },
+        {
+          "id": "g1f9Vb9J7OUg",
+          "name": "NewspaperDuotone1SvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__NewspaperDuotone1Svg.tsx"
+        },
+        {
+          "id": "tiSrLvaE3iUn",
+          "name": "AtomDuotone1SvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__AtomDuotone1Svg.tsx"
+        },
+        {
+          "id": "BPlNUGzXlC5h",
+          "name": "CircleNodesDuotone1SvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__CircleNodesDuotone1Svg.tsx"
+        },
+        {
+          "id": "Xnpl5FcrkiFg",
+          "name": "BullseyePointerDuotone1Svg2Icon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__BullseyePointerDuotone1Svg2.tsx"
+        },
+        {
+          "id": "bZ2badIKOcLx",
+          "name": "BullseyePointerDuotonesvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__BullseyePointerDuotonesvg.tsx"
+        },
+        {
+          "id": "H6Xnyi942ZBg",
+          "name": "EarthAmericasDuotonesvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__EarthAmericasDuotonesvg.tsx"
+        },
+        {
+          "id": "RNaKymE6oOG3",
+          "name": "SquaresvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__Squaresvg.tsx"
+        },
+        {
+          "id": "KxIa2UdtLPfD",
+          "name": "SquareCheckFilledsvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__SquareCheckFilledsvg.tsx"
+        },
+        {
+          "id": "Fd8cB2msNs-X",
+          "name": "SquareMinussvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__SquareMinussvg.tsx"
         }
       ],
       "images": [
@@ -1370,6 +1441,16 @@
           "id": "0MJDSXWqWdvr",
           "name": "backdrop mobile.png",
           "filePath": "../public/plasmic/daply_landing/images/backdropMobilepng.png"
+        },
+        {
+          "id": "YPyrSynECf22",
+          "name": "backdrop desktop 2.png",
+          "filePath": "../public/plasmic/daply_landing/images/backdropDesktop2Png.png"
+        },
+        {
+          "id": "D7BYNsLLO0bx",
+          "name": "backdrop mobile 2.png",
+          "filePath": "../public/plasmic/daply_landing/images/backdropMobile2Png.png"
         }
       ],
       "indirect": false,
@@ -1387,6 +1468,38 @@
           "name": "Fetcher",
           "displayName": "plasmic-data-source-fetcher",
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        },
+        {
+          "id": "iEfihgvowQsI",
+          "name": "CompiEfihgvowQsI",
+          "displayName": "ScrollProvider",
+          "componentImportPath": ""
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "r3ASNrnyvLLLAtDvzUioQ",
+      "projectApiToken": "eSFGpQaYCtO9sRbPuQ2Ll9dmLOg8I4oKhx6e1PuCrsfmUIVbFbSXcy32UrPTwF9zX2HVXA0xaIKJNhCMHvA",
+      "projectName": "react-slick",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/react_slick/plasmic.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "codeComponents": [
+        {
+          "id": "HOQUyOpClJ",
+          "name": "SliderWrapper",
+          "displayName": "hostless-slider",
+          "componentImportPath": "@plasmicpkgs/react-slick",
+          "helper": {
+            "name": "sliderHelpers",
+            "importPath": "@plasmicpkgs/react-slick"
+          }
         }
       ],
       "customFunctions": []

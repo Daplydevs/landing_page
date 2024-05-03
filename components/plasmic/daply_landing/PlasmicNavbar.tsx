@@ -79,17 +79,20 @@ import AppleIcon from "./icons/PlasmicIcon__Apple"; // plasmic-import: 563f33iyx
 createPlasmicElementProxy;
 
 export type PlasmicNavbar__VariantMembers = {
-  newsHeader: "dark";
+  colors: "dark" | "white";
   newsCategory: "newsCategory";
+  scrolled: "scrolled";
 };
 export type PlasmicNavbar__VariantsArgs = {
-  newsHeader?: SingleChoiceArg<"dark">;
+  colors?: SingleChoiceArg<"dark" | "white">;
   newsCategory?: SingleBooleanChoiceArg<"newsCategory">;
+  scrolled?: SingleBooleanChoiceArg<"scrolled">;
 };
 type VariantPropType = keyof PlasmicNavbar__VariantsArgs;
 export const PlasmicNavbar__VariantProps = new Array<VariantPropType>(
-  "newsHeader",
-  "newsCategory"
+  "colors",
+  "newsCategory",
+  "scrolled"
 );
 
 export type PlasmicNavbar__ArgsType = {};
@@ -104,8 +107,9 @@ export type PlasmicNavbar__OverridesType = {
 };
 
 export interface DefaultNavbarProps {
-  newsHeader?: SingleChoiceArg<"dark">;
+  colors?: SingleChoiceArg<"dark" | "white">;
   newsCategory?: SingleBooleanChoiceArg<"newsCategory">;
+  scrolled?: SingleBooleanChoiceArg<"scrolled">;
   className?: string;
 }
 
@@ -143,16 +147,22 @@ function PlasmicNavbar__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "newsHeader",
+        path: "colors",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.newsHeader
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.colors
       },
       {
         path: "newsCategory",
         type: "private",
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.newsCategory
+      },
+      {
+        path: "scrolled",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.scrolled
       }
     ],
     [$props, $ctx, $refs]
@@ -186,12 +196,14 @@ function PlasmicNavbar__RenderFunc(props: {
         plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root,
         {
+          [sty.rootcolors_dark]: hasVariant($state, "colors", "dark"),
+          [sty.rootcolors_white]: hasVariant($state, "colors", "white"),
           [sty.rootnewsCategory]: hasVariant(
             $state,
             "newsCategory",
             "newsCategory"
           ),
-          [sty.rootnewsHeader_dark]: hasVariant($state, "newsHeader", "dark")
+          [sty.rootscrolled]: hasVariant($state, "scrolled", "scrolled")
         }
       )}
     >
@@ -210,14 +222,14 @@ function PlasmicNavbar__RenderFunc(props: {
           data-plasmic-name={"logo"}
           data-plasmic-override={overrides.logo}
           className={classNames("__wab_instance", sty.logo, {
+            [sty.logocolors_dark]: hasVariant($state, "colors", "dark"),
             [sty.logonewsCategory]: hasVariant(
               $state,
               "newsCategory",
               "newsCategory"
-            ),
-            [sty.logonewsHeader_dark]: hasVariant($state, "newsHeader", "dark")
+            )
           })}
-          white={hasVariant($state, "newsHeader", "dark") ? true : undefined}
+          white={hasVariant($state, "colors", "dark") ? true : undefined}
         />
 
         <Stack__
@@ -226,100 +238,22 @@ function PlasmicNavbar__RenderFunc(props: {
           className={classNames(projectcss.all, sty.freeBox__fj6Sd)}
         >
           <Button
-            className={classNames("__wab_instance", sty.button__emFdM, {
-              [sty.buttonnewsCategory__emFdM29QK7]: hasVariant(
-                $state,
-                "newsCategory",
-                "newsCategory"
-              ),
-              [sty.buttonnewsHeader_dark__emFdMBpTZg]: hasVariant(
-                $state,
-                "newsHeader",
-                "dark"
-              )
-            })}
-            color2={
-              hasVariant($state, "newsCategory", "newsCategory")
-                ? "whiteClear"
-                : hasVariant($state, "newsHeader", "dark")
-                ? "whiteClear"
-                : "navLink"
-            }
-            link={`/services`}
-            submitsForm={true}
-            underline={
-              hasVariant($state, "newsCategory", "newsCategory")
-                ? true
-                : undefined
-            }
-          >
-            {"Services"}
-          </Button>
-          <Button
-            className={classNames("__wab_instance", sty.button__tdsUm, {
-              [sty.buttonnewsCategory__tdsUm29QK7]: hasVariant(
-                $state,
-                "newsCategory",
-                "newsCategory"
-              ),
-              [sty.buttonnewsHeader_dark__tdsUmBpTZg]: hasVariant(
-                $state,
-                "newsHeader",
-                "dark"
-              )
-            })}
-            color2={
-              hasVariant($state, "newsCategory", "newsCategory")
-                ? "whiteClear"
-                : hasVariant($state, "newsHeader", "dark")
-                ? "whiteClear"
-                : "navLink"
-            }
-            submitsForm={true}
-          >
-            {"Features"}
-          </Button>
-          <Button
-            className={classNames("__wab_instance", sty.button__kTna, {
-              [sty.buttonnewsCategory__kTna29QK7]: hasVariant(
-                $state,
-                "newsCategory",
-                "newsCategory"
-              ),
-              [sty.buttonnewsHeader_dark__kTnaBpTZg]: hasVariant(
-                $state,
-                "newsHeader",
-                "dark"
-              )
-            })}
-            color2={
-              hasVariant($state, "newsCategory", "newsCategory")
-                ? "whiteClear"
-                : hasVariant($state, "newsHeader", "dark")
-                ? "whiteClear"
-                : "navLink"
-            }
-            submitsForm={true}
-          >
-            {"Company"}
-          </Button>
-          <Button
             className={classNames("__wab_instance", sty.button__fsaBf, {
+              [sty.buttoncolors_dark__fsaBfBpTZg]: hasVariant(
+                $state,
+                "colors",
+                "dark"
+              ),
               [sty.buttonnewsCategory__fsaBf29QK7]: hasVariant(
                 $state,
                 "newsCategory",
                 "newsCategory"
-              ),
-              [sty.buttonnewsHeader_dark__fsaBfBpTZg]: hasVariant(
-                $state,
-                "newsHeader",
-                "dark"
               )
             })}
             color2={
               hasVariant($state, "newsCategory", "newsCategory")
                 ? "whiteClear"
-                : hasVariant($state, "newsHeader", "dark")
+                : hasVariant($state, "colors", "dark")
                 ? "whiteClear"
                 : "navLink"
             }
@@ -334,30 +268,6 @@ function PlasmicNavbar__RenderFunc(props: {
             >
               {"Contact"}
             </div>
-          </Button>
-          <Button
-            className={classNames("__wab_instance", sty.button__korHi, {
-              [sty.buttonnewsCategory__korHi29QK7]: hasVariant(
-                $state,
-                "newsCategory",
-                "newsCategory"
-              ),
-              [sty.buttonnewsHeader_dark__korHiBpTZg]: hasVariant(
-                $state,
-                "newsHeader",
-                "dark"
-              )
-            })}
-            color2={
-              hasVariant($state, "newsCategory", "newsCategory")
-                ? "whiteClear"
-                : hasVariant($state, "newsHeader", "dark")
-                ? "whiteClear"
-                : "navLink"
-            }
-            submitsForm={true}
-          >
-            {"Log in"}
           </Button>
         </Stack__>
         <CmsQueryRepeater
@@ -518,18 +428,18 @@ function PlasmicNavbar__RenderFunc(props: {
       </Stack__>
       <Button
         className={classNames("__wab_instance", sty.button__hsX8R, {
+          [sty.buttoncolors_dark__hsX8RBpTZg]: hasVariant(
+            $state,
+            "colors",
+            "dark"
+          ),
           [sty.buttonnewsCategory__hsX8R29QK7]: hasVariant(
             $state,
             "newsCategory",
             "newsCategory"
-          ),
-          [sty.buttonnewsHeader_dark__hsX8RBpTZg]: hasVariant(
-            $state,
-            "newsHeader",
-            "dark"
           )
         })}
-        color2={hasVariant($state, "newsHeader", "dark") ? "white" : "darkGray"}
+        color2={hasVariant($state, "colors", "dark") ? "white" : "darkGray"}
         submitsForm={true}
       >
         {"Sign up"}

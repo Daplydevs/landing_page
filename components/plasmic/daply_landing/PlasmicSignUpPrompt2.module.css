@@ -20,7 +20,7 @@
 .root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
   margin-top: 8px;
 }
-.freeBox__fwwEy {
+.freeBox__rY4We {
   box-shadow: 0px 10px 10px 0px #00000026;
   display: flex;
   position: relative;
@@ -30,164 +30,130 @@
   overflow: hidden;
   border-radius: 16px;
 }
-.freeBox__drAt4 {
+.freeBox__zBPrI {
   display: flex;
   position: relative;
   flex-direction: column;
   padding: 32px;
 }
-.freeBox__drAt4 > :global(.__wab_flex-container) {
+.freeBox__zBPrI > :global(.__wab_flex-container) {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
   margin-top: calc(0px - 16px);
   height: calc(100% + 16px);
 }
-.freeBox__drAt4 > :global(.__wab_flex-container) > *,
-.freeBox__drAt4 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__drAt4 > :global(.__wab_flex-container) > picture > img,
-.freeBox__drAt4
+.freeBox__zBPrI > :global(.__wab_flex-container) > *,
+.freeBox__zBPrI > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__zBPrI > :global(.__wab_flex-container) > picture > img,
+.freeBox__zBPrI
   > :global(.__wab_flex-container)
   > :global(.__wab_slot)
   > picture
   > img {
   margin-top: 16px;
 }
-.text__pXuzN {
-  font-size: 18px;
-}
-.freeBox__kGtkW {
-  display: grid;
+.freeBox__rwrma {
+  display: flex;
   position: relative;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
-  grid-row-gap: 16px;
-  grid-column-gap: 16px;
-  grid-auto-rows: auto;
-  grid-auto-columns: 1fr;
+  flex-direction: row;
+}
+.freeBox__rwrma > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-left: calc(0px - 16px);
+  width: calc(100% + 16px);
+}
+.freeBox__rwrma > :global(.__wab_flex-container) > *,
+.freeBox__rwrma > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__rwrma > :global(.__wab_flex-container) > picture > img,
+.freeBox__rwrma
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 16px;
+}
+.button__pAnUe:global(.__wab_instance) {
+  position: relative;
   width: 100%;
   min-width: 0;
 }
-.button___1FAl:global(.__wab_instance) {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
-.svg___52XB {
+.svg__awx6J {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.svg__qlmdq {
+.svg__vqQ7U {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.button__iuWuz:global(.__wab_instance) {
+.button__j9STy:global(.__wab_instance) {
   position: relative;
   width: 100%;
   min-width: 0;
 }
-.svg__wSu9K {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-}
-.svg__w2RLw {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-}
-.button__x8E1I:global(.__wab_instance) {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-}
-.svg__yitGh {
+.svg__posj2 {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
   color: var(--token-VYT3CU8k-25c);
 }
-.svg__yhBgf {
+.svg__kapZo {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.button__oQo9V:global(.__wab_instance) {
+.freeBox___1GbFp {
+  display: flex;
   position: relative;
-  width: 100%;
-  min-width: 0;
+  flex-direction: row;
 }
-.svg__ptsEs {
-  width: 24px;
-  height: 24px;
+.freeBox___1GbFp > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: calc(0px - 16px);
+  width: calc(100% + 16px);
+}
+.freeBox___1GbFp > :global(.__wab_flex-container) > *,
+.freeBox___1GbFp > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox___1GbFp > :global(.__wab_flex-container) > picture > img,
+.freeBox___1GbFp
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 16px;
+}
+.divider__glxC:global(.__wab_instance) {
   position: relative;
-  object-fit: cover;
-  color: var(--token-VYT3CU8k-25c);
 }
-.svg__hKCby {
-  width: 24px;
-  height: 24px;
+.divider__yMzAu:global(.__wab_instance) {
   position: relative;
-  object-fit: cover;
 }
-.button__xEtl7:global(.__wab_instance) {
-  position: relative;
-  width: auto;
-}
-.svg__sgeL6 {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-  color: var(--token-VYT3CU8k-25c);
-}
-.svg__obf5A {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-}
-.button__bzrCt:global(.__wab_instance) {
-  position: relative;
-  width: auto;
-}
-.svg__hlJdn {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-  color: var(--token-VYT3CU8k-25c);
-}
-.svg__nH9Hh {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  object-fit: cover;
-}
-.freeBox__c9YHs {
+.freeBox__koqge {
   display: flex;
   position: relative;
   flex-direction: column;
 }
-.freeBox__c9YHs > :global(.__wab_flex-container) {
+.freeBox__koqge > :global(.__wab_flex-container) {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
   margin-top: calc(0px - 16px);
   height: calc(100% + 16px);
 }
-.freeBox__c9YHs > :global(.__wab_flex-container) > *,
-.freeBox__c9YHs > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__c9YHs > :global(.__wab_flex-container) > picture > img,
-.freeBox__c9YHs
+.freeBox__koqge > :global(.__wab_flex-container) > *,
+.freeBox__koqge > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__koqge > :global(.__wab_flex-container) > picture > img,
+.freeBox__koqge
   > :global(.__wab_flex-container)
   > :global(.__wab_slot)
   > picture
@@ -197,75 +163,28 @@
 .textInput:global(.__wab_instance) {
   position: relative;
 }
-.svg___9R5Sk {
+.svg__mt1F2 {
   position: relative;
   object-fit: cover;
   width: 24px;
   height: 24px;
 }
-.svg__znuvp {
+.svg__krr33 {
   position: relative;
   object-fit: cover;
   width: 24px;
   height: 24px;
-}
-.textInput5:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-}
-.svg___8JNxa {
-  position: relative;
-  object-fit: cover;
-  width: 24px;
-  height: 24px;
-}
-.svg__tSOq {
-  position: relative;
-  object-fit: cover;
-  width: 24px;
-  height: 24px;
-}
-.checkbox:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-}
-.checkbox2:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-}
-.checkbox3:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-}
-.checkbox4:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
 }
 .textInput2:global(.__wab_instance) {
   position: relative;
 }
-.svg___4MNuG {
+.svg__jUwH {
   position: relative;
   object-fit: cover;
   width: 24px;
   height: 24px;
 }
-.svg__onAld {
-  position: relative;
-  object-fit: cover;
-  width: 24px;
-  height: 24px;
-}
-.textInput4:global(.__wab_instance) {
-  position: relative;
-}
-.svg__ueLc1 {
-  position: relative;
-  object-fit: cover;
-  width: 24px;
-  height: 24px;
-}
-.svg___0EWl4 {
+.svg__hlQpZ {
   position: relative;
   object-fit: cover;
   width: 24px;
@@ -274,41 +193,41 @@
 .textInput3:global(.__wab_instance) {
   position: relative;
 }
-.svg__daVkC {
+.svg__nOvbN {
   position: relative;
   object-fit: cover;
   width: 24px;
   height: 24px;
 }
-.svg__uqEc6 {
+.svg__gxCi5 {
   position: relative;
   object-fit: cover;
   width: 24px;
   height: 24px;
 }
-.button__gn5H:global(.__wab_instance) {
+.button___0RPl:global(.__wab_instance) {
   position: relative;
   width: 100%;
   min-width: 0;
 }
-.svg__wU0Cn {
+.svg__mdo1 {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
 }
-.svg__vtQxy {
+.svg__wxiiV {
   width: 24px;
   height: 24px;
   position: relative;
   object-fit: cover;
   color: var(--token-fT98I4nMek3C);
 }
-.divider:global(.__wab_instance) {
+.divider__i2Lpw:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
-.freeBox__gviUh {
+.freeBox__vYDhR {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -317,7 +236,7 @@
   background: var(--token-0U81vTZs--Nk);
   padding: 32px;
 }
-.text___5Oi5H {
+.text__j10M9 {
   position: relative;
   color: var(--token-VYT3CU8k-25c);
 }

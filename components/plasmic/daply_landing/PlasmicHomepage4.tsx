@@ -70,6 +70,8 @@ import CallToActionSection from "../../CallToActionSection"; // plasmic-import: 
 import Button from "../../Button"; // plasmic-import: dBCQUhJCSZs2/component
 import FooterSection from "../../FooterSection"; // plasmic-import: 7rGOkW3yxftm/component
 
+import { useScreenVariants as useScreenVariantseatfCtt4BrEn } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: eatfCTT4BrEN/globalVariant
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -151,6 +153,10 @@ function PlasmicHomepage4__RenderFunc(props: {
     $refs
   });
 
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantseatfCtt4BrEn()
+  });
+
   return (
     <React.Fragment>
       <Head>
@@ -194,13 +200,13 @@ function PlasmicHomepage4__RenderFunc(props: {
           <div className={classNames(projectcss.all, sty.freeBox__cXn7F)}>
             <Navbar
               className={classNames("__wab_instance", sty.navbar___4E9J2)}
-              newsHeader={"dark"}
+              colors={"dark"}
             />
 
             <Navbar
               className={classNames("__wab_instance", sty.navbar__tegX)}
+              colors={"dark"}
               newsCategory={true}
-              newsHeader={"dark"}
             />
           </div>
           <Stack__
@@ -498,6 +504,7 @@ function PlasmicHomepage4__RenderFunc(props: {
               <BlogCardLarge
                 data-plasmic-name={"blogCardLarge"}
                 data-plasmic-override={overrides.blogCardLarge}
+                children={null}
                 className={classNames("__wab_instance", sty.blogCardLarge)}
               />
 
@@ -716,7 +723,7 @@ export const PlasmicHomepage4 = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "[title]",
+      title: "Daply News",
       description: "",
       ogImageSrc: "",
       canonical: ""
