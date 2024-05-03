@@ -1,4 +1,4 @@
-.white {
+.grey {
   display: inline-flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6,21 +6,19 @@
   position: relative;
   width: auto;
   height: auto;
+  background: none;
   padding: 64px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .white {
+  .grey {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
-.whitebackground_dark {
+.greybackground_dark {
   background: var(--token-PHaAyVJD20_G);
 }
-.whitebackground_gray {
-  background: var(--token-0U81vTZs--Nk);
-}
-.whitebackground_white {
+.greybackground_white {
   background: #ffffff;
 }
 .freeBox {
