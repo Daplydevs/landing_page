@@ -6,6 +6,7 @@ import {
   PlasmicRootProvider,
 } from "@plasmicapp/loader-nextjs";
 import type { GetStaticPaths, GetStaticProps } from "next";
+
 import Error from "next/error";
 import { useRouter } from "next/router";
 import { PLASMIC } from "@/plasmic-init";
@@ -59,30 +60,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  try {
-    const pageModules = await PLASMIC.fetchPages();
-    const uniquePaths = new Set();
-
-    // Map the paths and filter out duplicates
-    const paths = pageModules.reduce((acc, mod) => {
-      const catchall = mod.path.substring(1).split("/");
-      const pathString = catchall.join("/");
-      if (!uniquePaths.has(pathString)) {
-        uniquePaths.add(pathString);
-        acc.push({ params: { catchall } });
-      }
-      return acc;
-    }, []);
-
-    return {
-      paths,
-      fallback: "blocking",
-    };
-  } catch (error) {
-    console.error("Error fetching Plasmic pages:", error);
-    return {
-      paths: [],
-      fallback: "blocking",
-    };
-  }
-};
+  const pageModules = await PLASMIC.fetchPages();
+  return {
+    paths: pageModules.map((mod) => ({
+      params: {
+        catchall: mod.path.substring(1).split("/"),
+      },
+    })),
+    fallback: "blocking",
+  };
+}
