@@ -1096,20 +1096,6 @@
           "componentType": "component"
         },
         {
-          "id": "trPESwWzhIQ",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
-          "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/index.tsx"
-          },
-          "cssFilePath": "plasmic/daply_landing/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/"
-        },
-        {
           "id": "RKAk0OF_rMnd",
           "name": "Statistic",
           "type": "managed",
@@ -1148,6 +1134,20 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "checkbox"
+        },
+        {
+          "id": "trPESwWzhIQ",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
         }
       ],
       "icons": [
