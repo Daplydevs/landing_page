@@ -154,6 +154,7 @@ function PlasmicHomepage__RenderFunc(props: {
         )
       }
     ],
+
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -177,6 +178,7 @@ function PlasmicHomepage__RenderFunc(props: {
           property="og:title"
           content={PlasmicHomepage.pageMetadata.title}
         />
+
         <meta
           key="twitter:title"
           name="twitter:title"
@@ -756,6 +758,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     </AntdAccordionItem>
                   </React.Fragment>
                 ),
+
                 onChange: generateStateOnChangePropForCodeComponents(
                   $state,
                   "activePanelId",
@@ -772,6 +775,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     plasmicStateName: "accordion2.activePanelId"
                   }
                 ],
+
                 [],
                 AntdAccordion_Helpers ?? {},
                 child$Props
@@ -809,6 +813,7 @@ const PlasmicDescendants = {
     "accordion2",
     "footerSection"
   ],
+
   navbar: ["navbar"],
   headerHeroSection: ["headerHeroSection"],
   valuePropsSection: ["valuePropsSection"],
@@ -836,6 +841,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicHomepage__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

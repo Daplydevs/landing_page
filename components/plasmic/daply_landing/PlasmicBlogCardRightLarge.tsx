@@ -156,6 +156,7 @@ function PlasmicBlogCardRightLarge__RenderFunc(props: {
           $props.leftImage2NoImage
       }
     ],
+
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -312,6 +313,7 @@ function PlasmicBlogCardRightLarge__RenderFunc(props: {
                 </div>
               </div>
             ),
+
             value: args.children
           })}
         </div>
@@ -460,6 +462,7 @@ function PlasmicBlogCardRightLarge__RenderFunc(props: {
                   </div>
                 </React.Fragment>
               ),
+
               value: args.children2
             })}
           </div>
@@ -498,6 +501,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicBlogCardRightLarge__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

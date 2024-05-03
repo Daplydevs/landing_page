@@ -165,6 +165,7 @@ function PlasmicPriceCard__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.borders
       }
     ],
+
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -295,6 +296,7 @@ function PlasmicPriceCard__RenderFunc(props: {
                 />
               </React.Fragment>
             ),
+
             value: args.description
           })}
         </Stack__>
@@ -317,6 +319,7 @@ function PlasmicPriceCard__RenderFunc(props: {
                 {"Buy starter"}
               </div>
             ),
+
             value: args.action
           })}
         </Button>
@@ -344,6 +347,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicPriceCard__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

@@ -145,6 +145,7 @@ function PlasmicHomepage3__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => "no"
       }
     ],
+
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -168,6 +169,7 @@ function PlasmicHomepage3__RenderFunc(props: {
           property="og:title"
           content={PlasmicHomepage3.pageMetadata.title}
         />
+
         <meta
           key="twitter:title"
           name="twitter:title"
@@ -614,6 +616,7 @@ const PlasmicDescendants = {
     "callToActionSection",
     "footerSection"
   ],
+
   h1: ["h1"],
   svg: ["svg"],
   video: ["video"],
@@ -641,6 +644,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicHomepage3__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

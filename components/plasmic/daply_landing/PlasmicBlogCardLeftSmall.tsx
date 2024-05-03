@@ -254,6 +254,7 @@ function PlasmicBlogCardLeftSmall__RenderFunc(props: {
                 </div>
               </React.Fragment>
             ),
+
             value: args.children
           })}
         </div>
@@ -327,6 +328,7 @@ function PlasmicBlogCardLeftSmall__RenderFunc(props: {
                   </div>
                 </React.Fragment>
               ),
+
               value: args.children2
             })}
           </div>
@@ -363,6 +365,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicBlogCardLeftSmall__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {
