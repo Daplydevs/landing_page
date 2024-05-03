@@ -2,7 +2,7 @@
   "name": "tmp-cpa",
   "version": "0.1.0",
   "private": true,
-  "type": "module", 
+  "type": "module", // Add this line to specify that your project uses ES modules
   "scripts": {
     "dev": "next dev",
     "build": "next build",
