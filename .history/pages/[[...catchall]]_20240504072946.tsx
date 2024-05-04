@@ -7,7 +7,7 @@ import {
 } from "@plasmicapp/loader-nextjs";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import Error from "next/error";
-import { useRouter } from "next/router"; // Import useRouter hook
+import { useRouter } from "next/router";
 import { PLASMIC } from "@/plasmic-init";
 
 export default function PlasmicLoaderPage(props: {
@@ -15,7 +15,7 @@ export default function PlasmicLoaderPage(props: {
   queryCache?: Record<string, any>;
 }) {
   const { plasmicData, queryCache } = props;
-  const router = useRouter(); // Access router using the hook
+  const router = useRouter();
   if (!plasmicData || plasmicData.entryCompMetas.length === 0) {
     return <Error statusCode={404} />;
   }
@@ -27,7 +27,7 @@ export default function PlasmicLoaderPage(props: {
       prefetchedQueryData={queryCache}
       pageRoute={pageMeta.path}
       pageParams={pageMeta.params}
-      pageQuery={router.query} // Use router.query for query parameters
+      pageQuery={router.query}
     >
       <PlasmicComponent component={pageMeta.displayName} />
     </PlasmicRootProvider>
@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       prefetchedData={plasmicData}
       pageRoute={pageMeta.path}
       pageParams={pageMeta.params}
-      pageQuery={router.query} // Pass router.query here (won't be used)
+      pageQuery={router.query}
     >
       <PlasmicComponent component={pageMeta.displayName} />
     </PlasmicRootProvider>
