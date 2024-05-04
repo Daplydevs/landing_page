@@ -1,16 +1,17 @@
+// pages/[[...catchall]].tsx
+
 import * as React from "react";
+import { useRouter } from "next/router";
 import {
   PlasmicComponent,
   extractPlasmicQueryData,
   ComponentRenderData,
   PlasmicRootProvider,
 } from "@plasmicapp/loader-nextjs";
-import type { GetStaticPaths, GetStaticProps } from "next";
 import Error from "next/error";
-import { useRouter } from "next/router";
 import { PLASMIC } from "@/plasmic-init";
 
-export default function PlasmicLoaderPage(props: {
+export default function CatchAllPage(props: {
   plasmicData?: ComponentRenderData;
   queryCache?: Record<string, any>;
 }) {
@@ -34,9 +35,12 @@ export default function PlasmicLoaderPage(props: {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context: GetStaticPropsContext) => {
   const { catchall } = context.params ?? {};
-  const plasmicPath = typeof catchall === 'string' ? catchall : Array.isArray(catchall) ? `/${catchall.join('/')}` : '/';
+  let plasmicPath = '';
+  if (catchall) {
+    plasmicPath = typeof catchall === 'string' ? catchall : `/${catchall.join('/')}`;
+  }
   const plasmicData = await PLASMIC.maybeFetchComponentData("/content" + plasmicPath);
   if (!plasmicData) {
     // non-Plasmic catch-all
@@ -56,28 +60,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   );
   // Use revalidate if you want incremental static regeneration
   return { props: { plasmicData, queryCache }, revalidate: 60 };
-}
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  try {
-    const pageModules = await PLASMIC.fetchPages();
-    const paths = pageModules.map((mod, index) => {
-      // Define catch-all only for specific paths, excluding the root
-      const catchall = mod.path === "/" ? [] : mod.path.substring(1).split("/");
-      // Append a unique identifier to the last segment of the catchall parameter
-      catchall[catchall.length - 1] = `${catchall[catchall.length - 1]}_${index}`;
-      return { params: { catchall } };
-    });
-
-    return {
-      paths,
-      fallback: "blocking",
-    };
-  } catch (error) {
-    console.error("Error fetching Plasmic pages:", error);
-    return {
-      paths: [],
-      fallback: "blocking",
-    };
-  }
 };
