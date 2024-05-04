@@ -13,7 +13,7 @@ import { AntdConfigProvider } from "@plasmicpkgs/antd5/skinny/registerConfigProv
 import { CmsCredentialsProvider } from "@plasmicpkgs/plasmic-cms";
 import { ParallaxProviderWrapper } from "@plasmicpkgs/react-scroll-parallax";
 import { EmbedCss } from "@plasmicpkgs/plasmic-embed-css";
-
+import { CompiEfihgvowQsI } from "./CompiEfihgvowQsI";  // plasmic-import: iEfihgvowQsI/codeComponent
     
 
     export interface GlobalContextsProviderProps {
