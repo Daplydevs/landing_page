@@ -39,21 +39,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
     return { props: {} };
   }
   const pageMeta = plasmicData.entryCompMetas[0];
-  // Handle different types of query
-  let queryCache: Record<string, any> | undefined;
-  if (typeof query === 'string' || Array.isArray(query)) {
-    // Convert query to Record<string, any> if it's a string or string array
-    queryCache = { query: query };
-  } else {
-    // If query is undefined, set queryCache to undefined
-    queryCache = undefined;
-  }
-  const extractedQueryCache = await extractPlasmicQueryData(
+  const queryCache = await extractPlasmicQueryData(
     <PlasmicLoaderPage
       plasmicData={plasmicData}
-      queryCache={queryCache}
+      queryCache={query}
       query={query}
     />
   );
-  return { props: { plasmicData, queryCache: extractedQueryCache }, revalidate: 60 };
+  return { props: { plasmicData, queryCache }, revalidate: 60 };
 };
