@@ -61,20 +61,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   try {
     const pageModules = await PLASMIC.fetchPages();
-    const uniquePaths = new Set();
-
-    // Map the paths and filter out duplicates
-    const paths = pageModules.reduce<{ params: { catchall: string[] } }[]>((acc, mod, index) => {
-      const catchall = mod.path.substring(1).split("/");
-      // Append a unique identifier to the catchall parameter
+    const paths = pageModules.map((mod, index) => {
+      // Exclude catch-all for the root route ("/")
+      let catchall: string[] = mod.path === "/" ? [] : mod.path.substring(1).split("/");
+      // Append a unique identifier to the last segment of the catchall parameter
       catchall.push(`_${index}`);
-      const pathString = catchall.join("/");
-      if (!uniquePaths.has(pathString)) {
-        uniquePaths.add(pathString);
-        acc.push({ params: { catchall } });
-      }
-      return acc;
-    }, []);
+      return { params: { catchall } };
+    });
 
     return {
       paths,
