@@ -376,7 +376,7 @@
   position: relative;
   width: 100%;
   min-width: 0;
-  padding: 16px;
+  padding: 0px;
 }
 .freeBox__li3Ns > :global(.__wab_flex-container) {
   flex-direction: column;

@@ -753,20 +753,6 @@
       "cssFilePath": "plasmic/daply_landing/plasmic.module.css",
       "components": [
         {
-          "id": "dSFGZAghdS5H",
-          "name": "Services",
-          "type": "managed",
-          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
-          "renderModuleFilePath": "plasmic/daply_landing/PlasmicServices.tsx",
-          "importSpec": {
-            "modulePath": "../pages/services.tsx"
-          },
-          "cssFilePath": "plasmic/daply_landing/PlasmicServices.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/services"
-        },
-        {
           "id": "l9zB0gKjLGnY",
           "name": "Navbar",
           "type": "managed",
@@ -964,20 +950,6 @@
           "componentType": "component"
         },
         {
-          "id": "loGveCNgEVMe",
-          "name": "Homepage3",
-          "type": "managed",
-          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
-          "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage3.tsx",
-          "importSpec": {
-            "modulePath": "../pages/article/[title].tsx"
-          },
-          "cssFilePath": "plasmic/daply_landing/PlasmicHomepage3.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/article/[title]"
-        },
-        {
           "id": "pkCQ83zE8JFd",
           "name": "Video",
           "type": "managed",
@@ -1069,20 +1041,6 @@
           "componentType": "component"
         },
         {
-          "id": "YQCYqHksciRi",
-          "name": "Homepage4",
-          "type": "managed",
-          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
-          "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage4.tsx",
-          "importSpec": {
-            "modulePath": "../pages/news.tsx"
-          },
-          "cssFilePath": "plasmic/daply_landing/PlasmicHomepage4.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/article-2/[title]"
-        },
-        {
           "id": "YqfggvVEPrlZ",
           "name": "BlogCardLeftNoImage",
           "type": "managed",
@@ -1148,6 +1106,34 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/"
+        },
+        {
+          "id": "loGveCNgEVMe",
+          "name": "Homepage3",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage3.tsx",
+          "importSpec": {
+            "modulePath": "../pages/article/[title].tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicHomepage3.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/article/[title]"
+        },
+        {
+          "id": "YQCYqHksciRi",
+          "name": "Homepage4",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage4.tsx",
+          "importSpec": {
+            "modulePath": "../pages/news.tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicHomepage4.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news"
         }
       ],
       "icons": [
@@ -1477,8 +1463,7 @@
           "componentImportPath": ""
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "r3ASNrnyvLLLAtDvzUioQ",
@@ -1522,6 +1507,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.327",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.327/dist/plasmic.schema.json"
+  "cliVersion": "0.1.329",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.329/dist/plasmic.schema.json"
 }

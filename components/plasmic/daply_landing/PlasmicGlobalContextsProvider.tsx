@@ -12,13 +12,21 @@ import { EmbedCss } from "@plasmicpkgs/plasmic-embed-css";
 
 export interface GlobalContextsProviderProps {
   children?: React.ReactNode;
-  antdConfigProviderProps?: Partial<React.ComponentProps<typeof AntdConfigProvider>>;
-  cmsCredentialsProviderProps?: Partial<React.ComponentProps<typeof CmsCredentialsProvider>>;
-  parallaxProviderWrapperProps?: Partial<React.ComponentProps<typeof ParallaxProviderWrapper>>;
+  antdConfigProviderProps?: Partial<
+    React.ComponentProps<typeof AntdConfigProvider>
+  >;
+  cmsCredentialsProviderProps?: Partial<
+    React.ComponentProps<typeof CmsCredentialsProvider>
+  >;
+  parallaxProviderWrapperProps?: Partial<
+    React.ComponentProps<typeof ParallaxProviderWrapper>
+  >;
   embedCssProps?: Partial<React.ComponentProps<typeof EmbedCss>>;
 }
 
-export default function GlobalContextsProvider(props: GlobalContextsProviderProps) {
+export default function GlobalContextsProvider(
+  props: GlobalContextsProviderProps
+) {
   const {
     children,
     antdConfigProviderProps,
@@ -30,39 +38,139 @@ export default function GlobalContextsProvider(props: GlobalContextsProviderProp
   return (
     <AntdConfigProvider
       {...antdConfigProviderProps}
-      borderRadius={(antdConfigProviderProps && "borderRadius" in antdConfigProviderProps) ? antdConfigProviderProps.borderRadius! : 6}
-      colorBgBase={(antdConfigProviderProps && "colorBgBase" in antdConfigProviderProps) ? antdConfigProviderProps.colorBgBase! : "#ffffff"}
-      colorError={(antdConfigProviderProps && "colorError" in antdConfigProviderProps) ? antdConfigProviderProps.colorError! : "#ff4d4f"}
-      colorInfo={(antdConfigProviderProps && "colorInfo" in antdConfigProviderProps) ? antdConfigProviderProps.colorInfo! : "#1677ff"}
-      colorPrimary={(antdConfigProviderProps && "colorPrimary" in antdConfigProviderProps) ? antdConfigProviderProps.colorPrimary! : "#1677ff"}
-      colorSuccess={(antdConfigProviderProps && "colorSuccess" in antdConfigProviderProps) ? antdConfigProviderProps.colorSuccess! : "#52c41a"}
-      colorWarning={(antdConfigProviderProps && "colorWarning" in antdConfigProviderProps) ? antdConfigProviderProps.colorWarning! : "#faad14"}
-      controlHeight={(antdConfigProviderProps && "controlHeight" in antdConfigProviderProps) ? antdConfigProviderProps.controlHeight! : 32}
-      defaultDark={(antdConfigProviderProps && "defaultDark" in antdConfigProviderProps) ? antdConfigProviderProps.defaultDark! : false}
-      lineWidth={(antdConfigProviderProps && "lineWidth" in antdConfigProviderProps) ? antdConfigProviderProps.lineWidth! : 1}
-      loadingText={(antdConfigProviderProps && "loadingText" in antdConfigProviderProps) ? antdConfigProviderProps.loadingText! : undefined}
-      removeLoading={(antdConfigProviderProps && "removeLoading" in antdConfigProviderProps) ? antdConfigProviderProps.removeLoading! : undefined}
-      sizeStep={(antdConfigProviderProps && "sizeStep" in antdConfigProviderProps) ? antdConfigProviderProps.sizeStep! : 4}
-      sizeUnit={(antdConfigProviderProps && "sizeUnit" in antdConfigProviderProps) ? antdConfigProviderProps.sizeUnit! : 4}
-      themeStyles={(antdConfigProviderProps && "themeStyles" in antdConfigProviderProps) ? antdConfigProviderProps.themeStyles! : true ? {"fontFamily":"Poppins","fontSize":"16px","fontWeight":"400","lineHeight":"1.5","color":"#000000D9","letterSpacing":"normal"} : undefined}
-      wireframe={(antdConfigProviderProps && "wireframe" in antdConfigProviderProps) ? antdConfigProviderProps.wireframe! : false}
+      borderRadius={
+        antdConfigProviderProps && "borderRadius" in antdConfigProviderProps
+          ? antdConfigProviderProps.borderRadius!
+          : 6
+      }
+      colorBgBase={
+        antdConfigProviderProps && "colorBgBase" in antdConfigProviderProps
+          ? antdConfigProviderProps.colorBgBase!
+          : "#ffffff"
+      }
+      colorError={
+        antdConfigProviderProps && "colorError" in antdConfigProviderProps
+          ? antdConfigProviderProps.colorError!
+          : "#ff4d4f"
+      }
+      colorInfo={
+        antdConfigProviderProps && "colorInfo" in antdConfigProviderProps
+          ? antdConfigProviderProps.colorInfo!
+          : "#1677ff"
+      }
+      colorPrimary={
+        antdConfigProviderProps && "colorPrimary" in antdConfigProviderProps
+          ? antdConfigProviderProps.colorPrimary!
+          : "#1677ff"
+      }
+      colorSuccess={
+        antdConfigProviderProps && "colorSuccess" in antdConfigProviderProps
+          ? antdConfigProviderProps.colorSuccess!
+          : "#52c41a"
+      }
+      colorWarning={
+        antdConfigProviderProps && "colorWarning" in antdConfigProviderProps
+          ? antdConfigProviderProps.colorWarning!
+          : "#faad14"
+      }
+      controlHeight={
+        antdConfigProviderProps && "controlHeight" in antdConfigProviderProps
+          ? antdConfigProviderProps.controlHeight!
+          : 32
+      }
+      defaultDark={
+        antdConfigProviderProps && "defaultDark" in antdConfigProviderProps
+          ? antdConfigProviderProps.defaultDark!
+          : false
+      }
+      lineWidth={
+        antdConfigProviderProps && "lineWidth" in antdConfigProviderProps
+          ? antdConfigProviderProps.lineWidth!
+          : 1
+      }
+      loadingText={
+        antdConfigProviderProps && "loadingText" in antdConfigProviderProps
+          ? antdConfigProviderProps.loadingText!
+          : undefined
+      }
+      removeLoading={
+        antdConfigProviderProps && "removeLoading" in antdConfigProviderProps
+          ? antdConfigProviderProps.removeLoading!
+          : undefined
+      }
+      sizeStep={
+        antdConfigProviderProps && "sizeStep" in antdConfigProviderProps
+          ? antdConfigProviderProps.sizeStep!
+          : 4
+      }
+      sizeUnit={
+        antdConfigProviderProps && "sizeUnit" in antdConfigProviderProps
+          ? antdConfigProviderProps.sizeUnit!
+          : 4
+      }
+      themeStyles={
+        antdConfigProviderProps && "themeStyles" in antdConfigProviderProps
+          ? antdConfigProviderProps.themeStyles!
+          : true
+          ? {
+              fontFamily: "Poppins",
+              fontSize: "16px",
+              fontWeight: "400",
+              lineHeight: "1.5",
+              color: "#000000D9",
+              letterSpacing: "normal"
+            }
+          : undefined
+      }
+      wireframe={
+        antdConfigProviderProps && "wireframe" in antdConfigProviderProps
+          ? antdConfigProviderProps.wireframe!
+          : false
+      }
     >
       <CmsCredentialsProvider
         {...cmsCredentialsProviderProps}
-        databaseId={(cmsCredentialsProviderProps && "databaseId" in cmsCredentialsProviderProps) ? cmsCredentialsProviderProps.databaseId! : "vXWXChZbjardDsEzxW9r1w"}
-        databaseToken={(cmsCredentialsProviderProps && "databaseToken" in cmsCredentialsProviderProps) ? cmsCredentialsProviderProps.databaseToken! : "DptmUOUlEjJz3cQMX0QwxPu7lsz7SVnGeSGgm6KSF4CVGZ39M3wwP1hkNxWr8PseAMSHhcZCCsHbTUGVw"}
-        host={(cmsCredentialsProviderProps && "host" in cmsCredentialsProviderProps) ? cmsCredentialsProviderProps.host! : "https://data.plasmic.app"}
-        locale={(cmsCredentialsProviderProps && "locale" in cmsCredentialsProviderProps) ? cmsCredentialsProviderProps.locale! : "posts"}
+        databaseId={
+          cmsCredentialsProviderProps &&
+          "databaseId" in cmsCredentialsProviderProps
+            ? cmsCredentialsProviderProps.databaseId!
+            : "vXWXChZbjardDsEzxW9r1w"
+        }
+        databaseToken={
+          cmsCredentialsProviderProps &&
+          "databaseToken" in cmsCredentialsProviderProps
+            ? cmsCredentialsProviderProps.databaseToken!
+            : "DptmUOUlEjJz3cQMX0QwxPu7lsz7SVnGeSGgm6KSF4CVGZ39M3wwP1hkNxWr8PseAMSHhcZCCsHbTUGVw"
+        }
+        host={
+          cmsCredentialsProviderProps && "host" in cmsCredentialsProviderProps
+            ? cmsCredentialsProviderProps.host!
+            : "https://data.plasmic.app"
+        }
+        locale={
+          cmsCredentialsProviderProps && "locale" in cmsCredentialsProviderProps
+            ? cmsCredentialsProviderProps.locale!
+            : "posts"
+        }
       >
         <ParallaxProviderWrapper
           {...parallaxProviderWrapperProps}
-          scrollAxis={(parallaxProviderWrapperProps && "scrollAxis" in parallaxProviderWrapperProps) ? parallaxProviderWrapperProps.scrollAxis! : undefined}
+          scrollAxis={
+            parallaxProviderWrapperProps &&
+            "scrollAxis" in parallaxProviderWrapperProps
+              ? parallaxProviderWrapperProps.scrollAxis!
+              : undefined
+          }
         >
           <EmbedCss
             {...embedCssProps}
-            css={(embedCssProps && "css" in embedCssProps) ? embedCssProps.css! : ".top-nav {\r\n  position: -webkit-sticky; /* For Safari */\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 1000; /* Adjust z-index as needed */\r\n  transition: background-color 0.3s ease; /* Smooth transition for background color change */\r\n  background-color: transparent; /* Set initial background color */\r\n}\r\n\r\n.top-nav.scrolled {\r\n  background-color: white; /* Change background color when scrolled */\r\n}\r\n"}
+            css={
+              embedCssProps && "css" in embedCssProps
+                ? embedCssProps.css!
+                : ".top-nav {\r\n  position: -webkit-sticky; /* For Safari */\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 1000; /* Adjust z-index as needed */\r\n  transition: background-color 0.3s ease; /* Smooth transition for background color change */\r\n  background-color: transparent; /* Set initial background color */\r\n}\r\n\r\n.top-nav.scrolled {\r\n  background-color: white; /* Change background color when scrolled */\r\n}\r\n"
+            }
           >
-            { children }
+            {children}
           </EmbedCss>
         </ParallaxProviderWrapper>
       </CmsCredentialsProvider>
