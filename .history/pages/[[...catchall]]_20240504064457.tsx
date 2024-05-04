@@ -35,8 +35,6 @@ export default function CatchAllPage(props: {
   );
 }
 
-
-
 import { GetStaticPropsContext } from 'next';
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {

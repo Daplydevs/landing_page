@@ -35,11 +35,7 @@ export default function CatchAllPage(props: {
   );
 }
 
-
-
-import { GetStaticPropsContext } from 'next';
-
-export const getStaticProps = async (context: GetStaticPropsContext) => {
+export const getStaticProps = async (context) => {
   const { catchall } = context.params ?? {};
   const plasmicPath = typeof catchall === 'string' ? catchall : Array.isArray(catchall) ? `/${catchall.join('/')}` : '/';
   const plasmicData = await PLASMIC.maybeFetchComponentData("/content" + plasmicPath);
