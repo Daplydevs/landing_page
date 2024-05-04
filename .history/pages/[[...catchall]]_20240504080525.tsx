@@ -1,21 +1,26 @@
-import * as React from "react";
-import { PlasmicComponent, extractPlasmicQueryData, ComponentRenderData, PlasmicRootProvider } from "@plasmicapp/loader-nextjs";
-import { GetStaticProps } from "next";
+// pages/plasmic/[...catchall].js
+
+import React from "react";
+import { useRouter } from "next/router";
 import Error from "next/error";
 import { PLASMIC } from "@/plasmic-init";
+import {
+  PlasmicComponent,
+  extractPlasmicQueryData,
+  PlasmicRootProvider,
+} from "@plasmicapp/loader-nextjs";
+import { GetStaticProps } from "next";
 
-interface PlasmicLoaderProps {
-  plasmicData?: ComponentRenderData;
-  queryCache?: Record<string, any>;
-  query?: any;
-}
-
-export default function PlasmicLoaderPage(props: PlasmicLoaderProps) {
-  const { plasmicData, queryCache, query } = props;
+export default function PlasmicLoaderPage(props) {
+  const router = useRouter();
+  const { plasmicData, queryCache } = props;
+  
   if (!plasmicData || plasmicData.entryCompMetas.length === 0) {
     return <Error statusCode={404} />;
   }
+  
   const pageMeta = plasmicData.entryCompMetas[0];
+  
   return (
     <PlasmicRootProvider
       loader={PLASMIC}
@@ -23,7 +28,7 @@ export default function PlasmicLoaderPage(props: PlasmicLoaderProps) {
       prefetchedQueryData={queryCache}
       pageRoute={pageMeta.path}
       pageParams={pageMeta.params}
-      pageQuery={query}
+      pageQuery={router.query}
     >
       <PlasmicComponent component={pageMeta.displayName} />
     </PlasmicRootProvider>
@@ -32,13 +37,23 @@ export default function PlasmicLoaderPage(props: PlasmicLoaderProps) {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { catchall, query } = context.params ?? {};
-  const plasmicPath = typeof catchall === 'string' ? catchall : Array.isArray(catchall) ? `/${catchall.join('/')}` : '/';
-  const plasmicData = await PLASMIC.maybeFetchComponentData("/content" + plasmicPath);
+  const plasmicPath =
+    typeof catchall === "string"
+      ? catchall
+      : Array.isArray(catchall)
+      ? `/${catchall.join("/")}`
+      : "/";
+  const plasmicData = await PLASMIC.maybeFetchComponentData(
+    "/content" + plasmicPath
+  );
+
   if (!plasmicData) {
     // non-Plasmic catch-all
     return { props: {} };
   }
+
   const pageMeta = plasmicData.entryCompMetas[0];
+
   const queryCache = await extractPlasmicQueryData(
     <PlasmicLoaderPage
       plasmicData={plasmicData}
@@ -46,5 +61,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       query={query}
     />
   );
+
   return { props: { plasmicData, queryCache }, revalidate: 60 };
 };
