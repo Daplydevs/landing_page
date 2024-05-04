@@ -63,7 +63,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const pageModules = await PLASMIC.fetchPages();
     const paths = pageModules.map((mod, index) => {
       // Define catch-all only for specific paths, excluding the root
-      const catchall = mod.path === "/" ? undefined : mod.path.substring(1).split("/");
+      const catchall = mod.path === "/" ? [] : mod.path.substring(1).split("/");
       // Append a unique identifier to the last segment of the catchall parameter
       catchall[catchall.length - 1] = `${catchall[catchall.length - 1]}_${index}`;
       return { params: { catchall } };
