@@ -1,5 +1,6 @@
 import * as React from "react";
 import { PlasmicComponent, extractPlasmicQueryData, ComponentRenderData, PlasmicRootProvider } from "@plasmicapp/loader-nextjs";
+import { GetStaticProps } from "next";
 import Error from "next/error";
 import { PLASMIC } from "@/plasmic-init";
 import { GetStaticPaths, GetStaticProps } from "next";
