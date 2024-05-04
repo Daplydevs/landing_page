@@ -8,9 +8,7 @@ import {
 import type { GetStaticPaths, GetStaticProps } from "next";
 import Error from "next/error";
 import { useRouter } from "next/router"; // Import useRouter hook
-
-// Assuming PLASMIC is an environment variable set in Vercel
-import { PLASMIC } from "@/plasmic-init"; // Replace with your actual import path
+import { PLASMIC } from "@/plasmic-init";
 
 export default function PlasmicLoaderPage(props: {
   plasmicData?: ComponentRenderData;
@@ -34,7 +32,7 @@ export default function PlasmicLoaderPage(props: {
       <PlasmicComponent component={pageMeta.displayName} />
     </PlasmicRootProvider>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { catchall } = context.params ?? {};
@@ -84,5 +82,5 @@ export const getStaticPaths: GetStaticPaths = async () => {
       paths: [],
       fallback: "blocking",
     };
-  };
+  }
 };

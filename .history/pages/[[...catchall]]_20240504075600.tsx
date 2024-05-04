@@ -34,7 +34,7 @@ export default function PlasmicLoaderPage(props: {
       <PlasmicComponent component={pageMeta.displayName} />
     </PlasmicRootProvider>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { catchall } = context.params ?? {};
@@ -84,5 +84,5 @@ export const getStaticPaths: GetStaticPaths = async () => {
       paths: [],
       fallback: "blocking",
     };
-  };
+  }
 };
