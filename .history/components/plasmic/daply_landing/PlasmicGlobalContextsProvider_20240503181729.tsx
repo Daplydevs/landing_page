@@ -7,9 +7,9 @@
 
     
 
-import * as React from "react"
-import {hasVariant, ensureGlobalVariants} from "@plasmicapp/react-web";
-import { AntdConfigProvider } from "@plasmicpkgs/antd5/skinny/registerConfigProvider";
+    import * as React from "react"
+    import {hasVariant, ensureGlobalVariants} from "@plasmicapp/react-web";
+    import { AntdConfigProvider } from "@plasmicpkgs/antd5/skinny/registerConfigProvider";
 import { CmsCredentialsProvider } from "@plasmicpkgs/plasmic-cms";
 import { ParallaxProviderWrapper } from "@plasmicpkgs/react-scroll-parallax";
 import { EmbedCss } from "@plasmicpkgs/plasmic-embed-css";
