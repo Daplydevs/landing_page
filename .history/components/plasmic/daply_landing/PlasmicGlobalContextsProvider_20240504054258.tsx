@@ -27,7 +27,6 @@ parallaxProviderWrapperProps?: Partial<
 embedCssProps?: Partial<
            Omit<React.ComponentProps<typeof EmbedCss>, "children">>;
 
-    }
 
     export default function GlobalContextsProvider(props: GlobalContextsProviderProps) {
       
