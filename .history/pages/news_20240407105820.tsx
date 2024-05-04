@@ -2,9 +2,9 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react";
 import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-web/lib/host";
-import GlobalContextsProvider from "../components/plasmic/daply_landing/PlasmicGlobalContextsProvider";
-import { ScreenVariantProvider } from "../components/plasmic/daply_landing/PlasmicGlobalVariant__Screen";
-import { PlasmicHomepage4 } from "../components/plasmic/daply_landing/PlasmicHomepage4";
+import GlobalContextsProvider from "../../components/plasmic/daply_landing/PlasmicGlobalContextsProvider";
+import { ScreenVariantProvider } from "../../components/plasmic/daply_landing/PlasmicGlobalVariant__Screen";
+import { PlasmicHomepage4 } from "../../components/plasmic/daply_landing/PlasmicHomepage4";
 import { useRouter } from "next/router";
 
 function Homepage4() {
