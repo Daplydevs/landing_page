@@ -105,6 +105,7 @@
 }
 .root:hover {
   background: var(--token-0U81vTZs--Nk);
+  transform: translateX(5px) translateY(0px) translateZ(0px);
 }
 .rootcolor2_green:hover {
   background: #40e569;
@@ -122,7 +123,7 @@
   background: var(--token-VYT3CU8k-25c);
 }
 .root:focus {
-  box-shadow: 0px 0px 0px 4px #0095ff80;
+  box-shadow: 0px 0px 0px 4px #4162ff61;
   outline: none;
 }
 .root:hover:active {
@@ -162,9 +163,10 @@
 }
 .slotTargetChildren {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 26px;
   white-space: pre;
+  font-family: "Quicksand", sans-serif;
 }
 .slotTargetChildrencolor2_green {
   color: var(--token-U_HqrtqfMVpg);

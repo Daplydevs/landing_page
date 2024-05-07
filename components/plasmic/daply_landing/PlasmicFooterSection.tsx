@@ -153,7 +153,6 @@ function PlasmicFooterSection__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.mobileDarkk
       }
     ],
-
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -216,31 +215,27 @@ function PlasmicFooterSection__RenderFunc(props: {
             )
           })}
         >
-          <Logo
-            data-plasmic-name={"logo"}
-            data-plasmic-override={overrides.logo}
-            className={classNames("__wab_instance", sty.logo, {
-              [sty.logodark]: hasVariant($state, "dark", "dark"),
-              [sty.logomobileDarkk]: hasVariant(
-                $state,
-                "mobileDarkk",
-                "mobileDarkk"
-              )
-            })}
-            white={
-              hasVariant($state, "mobileDarkk", "mobileDarkk")
-                ? true
-                : hasVariant($state, "dark", "dark")
-                ? true
-                : undefined
-            }
-          />
+          <div className={classNames(projectcss.all, sty.freeBox__rcyl5)}>
+            <Logo
+              data-plasmic-name={"logo"}
+              data-plasmic-override={overrides.logo}
+              className={classNames("__wab_instance", sty.logo, {
+                [sty.logodark]: hasVariant($state, "dark", "dark"),
+                [sty.logomobileDarkk]: hasVariant(
+                  $state,
+                  "mobileDarkk",
+                  "mobileDarkk"
+                )
+              })}
+              white={
+                hasVariant($state, "mobileDarkk", "mobileDarkk")
+                  ? true
+                  : hasVariant($state, "dark", "dark")
+                  ? true
+                  : undefined
+              }
+            />
 
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__lgrO)}
-          >
             <div
               className={classNames(
                 projectcss.all,
@@ -260,8 +255,14 @@ function PlasmicFooterSection__RenderFunc(props: {
                 }
               )}
             >
-              {"Supercharge your content"}
+              {"Supercharge your content\u26a1"}
             </div>
+          </div>
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__lgrO)}
+          >
             <Stack__
               as={"div"}
               hasGap={true}
@@ -797,7 +798,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicFooterSection__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

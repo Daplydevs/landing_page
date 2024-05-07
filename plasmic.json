@@ -1134,6 +1134,19 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/news"
+        },
+        {
+          "id": "RWEirKIQE6N-",
+          "name": "NavbarMobile",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicNavbarMobile.tsx",
+          "importSpec": {
+            "modulePath": "NavbarMobile.tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicNavbarMobile.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -1286,6 +1299,46 @@
           "id": "Fd8cB2msNs-X",
           "name": "SquareMinussvgIcon",
           "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__SquareMinussvg.tsx"
+        },
+        {
+          "id": "elZYR_EjRN7S",
+          "name": "ArrowRightToArcSolidsvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__ArrowRightToArcSolidsvg.tsx"
+        },
+        {
+          "id": "uG_z26ILKyPq",
+          "name": "BarsSolidsvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__BarsSolidsvg.tsx"
+        },
+        {
+          "id": "59AFIWNl0DKP",
+          "name": "XmarkSolidsvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__XmarkSolidsvg.tsx"
+        },
+        {
+          "id": "s_-J1zBLIOoC",
+          "name": "NewspaperSolidsvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__NewspaperSolidsvg.tsx"
+        },
+        {
+          "id": "3tXv1iSP0O2P",
+          "name": "NewspaperDuotone1Svg2Icon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__NewspaperDuotone1Svg2.tsx"
+        },
+        {
+          "id": "6UTw5wtu80dw",
+          "name": "BookDuotonesvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__BookDuotonesvg.tsx"
+        },
+        {
+          "id": "MZSgSSNAE010",
+          "name": "BoxTapedDuotonesvgIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__BoxTapedDuotonesvg.tsx"
+        },
+        {
+          "id": "SX7fL_KuJ8A-",
+          "name": "VideoDuotone1Svg2Icon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__VideoDuotone1Svg2.tsx"
         }
       ],
       "images": [
@@ -1438,6 +1491,46 @@
           "id": "D7BYNsLLO0bx",
           "name": "backdrop mobile 2.png",
           "filePath": "../public/plasmic/daply_landing/images/backdropMobile2Png.png"
+        },
+        {
+          "id": "vDKwjX4pM-9q",
+          "name": "glt grey.png",
+          "filePath": "../public/plasmic/daply_landing/images/gltGreypng.png"
+        },
+        {
+          "id": "aoVdJ-K8Ay5P",
+          "name": "schooltube grey.png",
+          "filePath": "../public/plasmic/daply_landing/images/schooltubeGreypng.png"
+        },
+        {
+          "id": "l6o8mfiXRKXi",
+          "name": "GLT logo sample 1.png",
+          "filePath": "../public/plasmic/daply_landing/images/gltLogoSample1Png.png"
+        },
+        {
+          "id": "ilVBmQPet458",
+          "name": "Schooltube-CSL 1.png",
+          "filePath": "../public/plasmic/daply_landing/images/schooltubeCsl1Png.png"
+        },
+        {
+          "id": "bfTlvgKIsML2",
+          "name": "visionz 1.png",
+          "filePath": "../public/plasmic/daply_landing/images/visionz1Png.png"
+        },
+        {
+          "id": "Jwe47lIXJH1r",
+          "name": "LnUpIcon_White&Green 1.png",
+          "filePath": "../public/plasmic/daply_landing/images/lnUpIconWhiteGreen1Png.png"
+        },
+        {
+          "id": "NfKuPrgzccjG",
+          "name": "visionz 1.png 2",
+          "filePath": "../public/plasmic/daply_landing/images/visionz1Png2.png"
+        },
+        {
+          "id": "hWQhO0-XlyBN",
+          "name": "visionz 1.png 3",
+          "filePath": "../public/plasmic/daply_landing/images/visionz1Png3.png"
         }
       ],
       "indirect": false,

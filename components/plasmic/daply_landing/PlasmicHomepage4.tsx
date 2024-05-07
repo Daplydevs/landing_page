@@ -200,13 +200,10 @@ function PlasmicHomepage4__RenderFunc(props: {
           <div className={classNames(projectcss.all, sty.freeBox__cXn7F)}>
             <Navbar
               className={classNames("__wab_instance", sty.navbar___4E9J2)}
-              colors={"dark"}
             />
 
             <Navbar
               className={classNames("__wab_instance", sty.navbar__tegX)}
-              colors={"dark"}
-              newsCategory={true}
             />
           </div>
           <Stack__

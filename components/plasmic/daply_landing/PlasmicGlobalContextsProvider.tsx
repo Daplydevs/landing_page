@@ -15,12 +15,15 @@ export interface GlobalContextsProviderProps {
   antdConfigProviderProps?: Partial<
     React.ComponentProps<typeof AntdConfigProvider>
   >;
+
   cmsCredentialsProviderProps?: Partial<
     React.ComponentProps<typeof CmsCredentialsProvider>
   >;
+
   parallaxProviderWrapperProps?: Partial<
     React.ComponentProps<typeof ParallaxProviderWrapper>
   >;
+
   embedCssProps?: Partial<React.ComponentProps<typeof EmbedCss>>;
 }
 

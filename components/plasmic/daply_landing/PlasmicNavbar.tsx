@@ -75,24 +75,22 @@ import projectcss from "./plasmic.module.css"; // plasmic-import: e2Wrjg6Dz94Bkf
 import sty from "./PlasmicNavbar.module.css"; // plasmic-import: l9zB0gKjLGnY/css
 
 import AppleIcon from "./icons/PlasmicIcon__Apple"; // plasmic-import: 563f33iyx-K3/icon
+import ArrowRightToArcSolidsvgIcon from "./icons/PlasmicIcon__ArrowRightToArcSolidsvg"; // plasmic-import: elZYR_EjRN7S/icon
 
 createPlasmicElementProxy;
 
 export type PlasmicNavbar__VariantMembers = {
-  colors: "dark" | "white";
-  newsCategory: "newsCategory";
   scrolled: "scrolled";
+  hamburger: "open";
 };
 export type PlasmicNavbar__VariantsArgs = {
-  colors?: SingleChoiceArg<"dark" | "white">;
-  newsCategory?: SingleBooleanChoiceArg<"newsCategory">;
   scrolled?: SingleBooleanChoiceArg<"scrolled">;
+  hamburger?: MultiChoiceArg<"open">;
 };
 type VariantPropType = keyof PlasmicNavbar__VariantsArgs;
 export const PlasmicNavbar__VariantProps = new Array<VariantPropType>(
-  "colors",
-  "newsCategory",
-  "scrolled"
+  "scrolled",
+  "hamburger"
 );
 
 export type PlasmicNavbar__ArgsType = {};
@@ -101,15 +99,14 @@ export const PlasmicNavbar__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicNavbar__OverridesType = {
   root?: Flex__<"div">;
-  logo?: Flex__<typeof Logo>;
+  hamburger2?: Flex__<"a"> & Partial<LinkProps>;
   cmsDataFetcher?: Flex__<typeof CmsQueryRepeater>;
   cmsEntryField?: Flex__<typeof CmsRowField>;
 };
 
 export interface DefaultNavbarProps {
-  colors?: SingleChoiceArg<"dark" | "white">;
-  newsCategory?: SingleBooleanChoiceArg<"newsCategory">;
   scrolled?: SingleBooleanChoiceArg<"scrolled">;
+  hamburger?: MultiChoiceArg<"open">;
   className?: string;
 }
 
@@ -147,25 +144,18 @@ function PlasmicNavbar__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "colors",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.colors
-      },
-      {
-        path: "newsCategory",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.newsCategory
-      },
-      {
         path: "scrolled",
         type: "private",
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.scrolled
+      },
+      {
+        path: "hamburger",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.hamburger
       }
     ],
-
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -197,261 +187,334 @@ function PlasmicNavbar__RenderFunc(props: {
         plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root,
         {
-          [sty.rootcolors_dark]: hasVariant($state, "colors", "dark"),
-          [sty.rootcolors_white]: hasVariant($state, "colors", "white"),
-          [sty.rootnewsCategory]: hasVariant(
-            $state,
-            "newsCategory",
-            "newsCategory"
-          ),
+          [sty.roothamburger_open]: hasVariant($state, "hamburger", "open"),
           [sty.rootscrolled]: hasVariant($state, "scrolled", "scrolled")
         }
       )}
     >
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__fiCx5, {
-          [sty.freeBoxnewsCategory__fiCx529QK7]: hasVariant(
+      <div
+        className={classNames(projectcss.all, sty.freeBox__lhmtn, {
+          [sty.freeBoxhamburger_open__lhmtnPKznc]: hasVariant(
             $state,
-            "newsCategory",
-            "newsCategory"
+            "hamburger",
+            "open"
           )
         })}
       >
-        <Logo
-          data-plasmic-name={"logo"}
-          data-plasmic-override={overrides.logo}
-          className={classNames("__wab_instance", sty.logo, {
-            [sty.logocolors_dark]: hasVariant($state, "colors", "dark"),
-            [sty.logonewsCategory]: hasVariant(
-              $state,
-              "newsCategory",
-              "newsCategory"
-            )
-          })}
-          white={hasVariant($state, "colors", "dark") ? true : undefined}
-        />
+        <Logo className={classNames("__wab_instance", sty.logo__yLpSq)} />
+      </div>
+      <Button
+        className={classNames("__wab_instance", sty.button__sxVii, {
+          [sty.buttonhamburger_open__sxViiPKznc]: hasVariant(
+            $state,
+            "hamburger",
+            "open"
+          )
+        })}
+        color2={"darkGray"}
+        endIcon={
+          <ArrowRightToArcSolidsvgIcon
+            className={classNames(projectcss.all, sty.svg__v9J62)}
+            role={"img"}
+          />
+        }
+        showEndIcon={true}
+        submitsForm={true}
+      >
+        {"Launch  App"}
+      </Button>
+      <PlasmicLink__
+        data-plasmic-name={"hamburger2"}
+        data-plasmic-override={overrides.hamburger2}
+        className={classNames(projectcss.all, projectcss.a, sty.hamburger2)}
+        component={Link}
+        onClick={async event => {
+          const $steps = {};
 
+          $steps["updateHamburger"] = true
+            ? (() => {
+                const actionArgs = {
+                  vgroup: "hamburger",
+                  operation: 3,
+                  value: "open"
+                };
+                return (({ vgroup, value }) => {
+                  if (typeof value === "string") {
+                    value = [value];
+                  }
+
+                  let activeVariants = $stateGet($state, vgroup) ?? [];
+                  if (typeof activeVariants === "string") {
+                    activeVariants = [activeVariants];
+                  }
+                  for (const variant of value) {
+                    if (activeVariants.includes(variant)) {
+                      activeVariants.splice(activeVariants.indexOf(variant), 1);
+                    } else {
+                      activeVariants.push(variant);
+                    }
+                  }
+                  $stateSet($state, vgroup, activeVariants);
+                  return activeVariants;
+                })?.apply(null, [actionArgs]);
+              })()
+            : undefined;
+          if (
+            $steps["updateHamburger"] != null &&
+            typeof $steps["updateHamburger"] === "object" &&
+            typeof $steps["updateHamburger"].then === "function"
+          ) {
+            $steps["updateHamburger"] = await $steps["updateHamburger"];
+          }
+        }}
+        platform={"nextjs"}
+      >
+        <svg
+          className={classNames(projectcss.all, sty.svg__qa3G2)}
+          role={"img"}
+        />
+      </PlasmicLink__>
+      {(hasVariant($state, "hamburger", "open") ? true : false) ? (
         <Stack__
           as={"div"}
           hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__fj6Sd)}
-        >
-          <Button
-            className={classNames("__wab_instance", sty.button__fsaBf, {
-              [sty.buttoncolors_dark__fsaBfBpTZg]: hasVariant(
-                $state,
-                "colors",
-                "dark"
-              ),
-              [sty.buttonnewsCategory__fsaBf29QK7]: hasVariant(
-                $state,
-                "newsCategory",
-                "newsCategory"
-              )
-            })}
-            color2={
-              hasVariant($state, "newsCategory", "newsCategory")
-                ? "whiteClear"
-                : hasVariant($state, "colors", "dark")
-                ? "whiteClear"
-                : "navLink"
-            }
-            submitsForm={true}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__xTazF
-              )}
-            >
-              {"Contact"}
-            </div>
-          </Button>
-        </Stack__>
-        <CmsQueryRepeater
-          data-plasmic-name={"cmsDataFetcher"}
-          data-plasmic-override={overrides.cmsDataFetcher}
-          className={classNames("__wab_instance", sty.cmsDataFetcher, {
-            [sty.cmsDataFetchernewsCategory]: hasVariant(
+          className={classNames(projectcss.all, sty.freeBox__vrHfQ, {
+            [sty.freeBoxhamburger_open__vrHfQpKznc]: hasVariant(
               $state,
-              "newsCategory",
-              "newsCategory"
+              "hamburger",
+              "open"
+            ),
+            [sty.freeBoxscrolled__vrHfQxsAja]: hasVariant(
+              $state,
+              "scrolled",
+              "scrolled"
             )
           })}
-          desc={false}
-          emptyMessage={
-            <DataCtxReader__>
-              {$ctx => (
-                <React.Fragment>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__oqiso
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return undefined;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "No matching published entries found.";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                  <Link2
-                    className={classNames("__wab_instance", sty.link__dVhlB, {
-                      [sty.linknewsCategory__dVhlB29QK7]: hasVariant(
-                        $state,
-                        "newsCategory",
-                        "newsCategory"
-                      )
-                    })}
-                  />
-                </React.Fragment>
-              )}
-            </DataCtxReader__>
-          }
-          forceEmptyState={false}
-          forceLoadingState={false}
-          limit={0}
-          loadingMessage={
-            <DataCtxReader__>
-              {$ctx => (
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__f4QZa
-                  )}
-                >
-                  {"Loading..."}
-                </div>
-              )}
-            </DataCtxReader__>
-          }
-          noAutoRepeat={false}
-          noLayout={false}
-          table={"categories"}
-          useDraft={false}
         >
-          <DataCtxReader__>
-            {$ctx => (
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__z4Eti)}
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__kqW4U)}
+          >
+            <div
+              className={classNames(projectcss.all, sty.freeBox__irhcX, {
+                [sty.freeBoxhamburger_open__irhcXpKznc]: hasVariant(
+                  $state,
+                  "hamburger",
+                  "open"
+                )
+              })}
+            >
+              <Logo className={classNames("__wab_instance", sty.logo__thDvy)} />
+            </div>
+            <Button className={classNames("__wab_instance", sty.button__qsoau)}>
+              {"News"}
+            </Button>
+            {(
+              hasVariant(globalVariants, "screen", "mobileOnly") ? true : false
+            ) ? (
+              <Button
+                className={classNames("__wab_instance", sty.button__budlI)}
               >
-                <CmsRowField
-                  data-plasmic-name={"cmsEntryField"}
-                  data-plasmic-override={overrides.cmsEntryField}
-                  className={classNames("__wab_instance", sty.cmsEntryField, {
-                    [sty.cmsEntryFieldnewsCategory]: hasVariant(
-                      $state,
-                      "newsCategory",
-                      "newsCategory"
-                    )
-                  })}
-                  themeResetClassName={classNames(
-                    projectcss.root_reset,
-                    projectcss.root_reset_tags,
-                    projectcss.plasmic_default_styles,
-                    projectcss.plasmic_mixins,
-                    projectcss.plasmic_tokens,
-                    plasmic_antd_5_hostless_css.plasmic_tokens,
-                    plasmic_plasmic_rich_components_css.plasmic_tokens
+                {"About Us"}
+              </Button>
+            ) : null}
+            <Button
+              className={classNames("__wab_instance", sty.button___0HHiH)}
+            >
+              {"Label"}
+            </Button>
+            <CmsQueryRepeater
+              data-plasmic-name={"cmsDataFetcher"}
+              data-plasmic-override={overrides.cmsDataFetcher}
+              className={classNames("__wab_instance", sty.cmsDataFetcher)}
+              desc={false}
+              emptyMessage={
+                <DataCtxReader__>
+                  {$ctx => (
+                    <React.Fragment>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__st3V0
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "No matching published entries found.";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      <Link2
+                        className={classNames(
+                          "__wab_instance",
+                          sty.link__ngnWm
+                        )}
+                      />
+                    </React.Fragment>
                   )}
-                />
+                </DataCtxReader__>
+              }
+              forceEmptyState={false}
+              forceLoadingState={false}
+              limit={0}
+              loadingMessage={
+                <DataCtxReader__>
+                  {$ctx => (
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__c4IFw
+                      )}
+                    >
+                      {"Loading..."}
+                    </div>
+                  )}
+                </DataCtxReader__>
+              }
+              noAutoRepeat={false}
+              noLayout={false}
+              table={"categories"}
+              useDraft={false}
+            >
+              <DataCtxReader__>
+                {$ctx => (
+                  <Stack__
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__x5S37)}
+                  >
+                    <CmsRowField
+                      data-plasmic-name={"cmsEntryField"}
+                      data-plasmic-override={overrides.cmsEntryField}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.cmsEntryField
+                      )}
+                      themeResetClassName={classNames(
+                        projectcss.root_reset,
+                        projectcss.root_reset_tags,
+                        projectcss.plasmic_default_styles,
+                        projectcss.plasmic_mixins,
+                        projectcss.plasmic_tokens,
+                        plasmic_antd_5_hostless_css.plasmic_tokens,
+                        plasmic_plasmic_rich_components_css.plasmic_tokens
+                      )}
+                    />
 
-                <Link2
-                  className={classNames("__wab_instance", sty.link__r7C5T, {
-                    [sty.linknewsCategory__r7C5T29QK7]: hasVariant(
-                      $state,
-                      "newsCategory",
-                      "newsCategory"
-                    )
-                  })}
-                />
-              </Stack__>
-            )}
-          </DataCtxReader__>
-        </CmsQueryRepeater>
-        {false ? (
-          <div className={classNames(projectcss.all, sty.freeBox__e15B)}>
-            <button
+                    <Link2
+                      className={classNames("__wab_instance", sty.link__ppX23)}
+                    />
+                  </Stack__>
+                )}
+              </DataCtxReader__>
+            </CmsQueryRepeater>
+            <PlasmicLink__
               className={classNames(
                 projectcss.all,
-                projectcss.button,
+                projectcss.a,
                 projectcss.__wab_text,
-                sty.button__lc6Hs
+                sty.link__hKv3
               )}
+              component={Link}
+              href={"https://www.plasmic.app/"}
+              platform={"nextjs"}
             >
-              {"Sign up"}
-            </button>
-            <Button
-              className={classNames("__wab_instance", sty.button__prWhi)}
-              submitsForm={true}
-            >
-              {"Log in"}
-            </Button>
-          </div>
-        ) : null}
-        <PlasmicLink__
-          className={classNames(
-            projectcss.all,
-            projectcss.a,
-            projectcss.__wab_text,
-            sty.link__zvxZc,
-            {
-              [sty.linknewsCategory__zvxZc29QK7]: hasVariant(
-                $state,
-                "newsCategory",
-                "newsCategory"
-              )
-            }
-          )}
-          component={Link}
-          href={"https://www.plasmic.app/"}
-          platform={"nextjs"}
-        >
-          {"Some link text"}
-        </PlasmicLink__>
-      </Stack__>
-      <Button
-        className={classNames("__wab_instance", sty.button__hsX8R, {
-          [sty.buttoncolors_dark__hsX8RBpTZg]: hasVariant(
+              {"Some link text"}
+            </PlasmicLink__>
+          </Stack__>
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__tkRcX
+            )}
+            component={Link}
+            onClick={async event => {
+              const $steps = {};
+
+              $steps["updateHamburger"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "hamburger",
+                      operation: 0,
+                      value: "open"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+
+                      $stateSet($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHamburger"] != null &&
+                typeof $steps["updateHamburger"] === "object" &&
+                typeof $steps["updateHamburger"].then === "function"
+              ) {
+                $steps["updateHamburger"] = await $steps["updateHamburger"];
+              }
+            }}
+            platform={"nextjs"}
+          >
+            <svg
+              className={classNames(projectcss.all, sty.svg__lmRv)}
+              role={"img"}
+            />
+          </PlasmicLink__>
+        </Stack__>
+      ) : null}
+      <div
+        className={classNames(projectcss.all, sty.freeBox__gyUfp, {
+          [sty.freeBoxhamburger_open__gyUfpPKznc]: hasVariant(
             $state,
-            "colors",
-            "dark"
-          ),
-          [sty.buttonnewsCategory__hsX8R29QK7]: hasVariant(
-            $state,
-            "newsCategory",
-            "newsCategory"
+            "hamburger",
+            "open"
           )
         })}
-        color2={hasVariant($state, "colors", "dark") ? "white" : "darkGray"}
-        submitsForm={true}
       >
-        {"Sign up"}
-      </Button>
+        <Button
+          className={classNames("__wab_instance", sty.button__uXkkj, {
+            [sty.buttonhamburger_open__uXkkjPKznc]: hasVariant(
+              $state,
+              "hamburger",
+              "open"
+            )
+          })}
+        />
+
+        <Button
+          className={classNames("__wab_instance", sty.button__bHe8, {
+            [sty.buttonhamburger_open__bHe8PKznc]: hasVariant(
+              $state,
+              "hamburger",
+              "open"
+            )
+          })}
+        />
+      </div>
     </Stack__>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root", "logo", "cmsDataFetcher", "cmsEntryField"],
-  logo: ["logo"],
+  root: ["root", "hamburger2", "cmsDataFetcher", "cmsEntryField"],
+  hamburger2: ["hamburger2"],
   cmsDataFetcher: ["cmsDataFetcher", "cmsEntryField"],
   cmsEntryField: ["cmsEntryField"]
 } as const;
@@ -460,7 +523,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  logo: typeof Logo;
+  hamburger2: "a";
   cmsDataFetcher: typeof CmsQueryRepeater;
   cmsEntryField: typeof CmsRowField;
 };
@@ -470,7 +533,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicNavbar__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {
@@ -526,7 +588,7 @@ export const PlasmicNavbar = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    logo: makeNodeComponent("logo"),
+    hamburger2: makeNodeComponent("hamburger2"),
     cmsDataFetcher: makeNodeComponent("cmsDataFetcher"),
     cmsEntryField: makeNodeComponent("cmsEntryField"),
 

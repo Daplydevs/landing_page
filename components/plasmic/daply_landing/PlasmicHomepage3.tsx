@@ -201,13 +201,10 @@ function PlasmicHomepage3__RenderFunc(props: {
           <div className={classNames(projectcss.all, sty.freeBox__iUmsD)}>
             <Navbar
               className={classNames("__wab_instance", sty.navbar__lzZwy)}
-              colors={"dark"}
             />
 
             <Navbar
               className={classNames("__wab_instance", sty.navbar___6EU4G)}
-              colors={"dark"}
-              newsCategory={true}
             />
           </div>
           <CmsQueryRepeater

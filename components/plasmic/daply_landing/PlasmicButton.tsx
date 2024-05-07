@@ -109,7 +109,6 @@ export type PlasmicButton__VariantsArgs = {
     | "navLink"
     | "whiteClear"
   >;
-
   iconOnly?: SingleBooleanChoiceArg<"iconOnly">;
   outline?: SingleBooleanChoiceArg<"outline">;
   bgDifference?: SingleBooleanChoiceArg<"bgDifference">;
@@ -172,7 +171,6 @@ export interface DefaultButtonProps extends pp.BaseButtonProps {
     | "navLink"
     | "whiteClear"
   >;
-
   iconOnly?: SingleBooleanChoiceArg<"iconOnly">;
   outline?: SingleBooleanChoiceArg<"outline">;
   bgDifference?: SingleBooleanChoiceArg<"bgDifference">;
@@ -290,7 +288,6 @@ function PlasmicButton__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.underline
       }
     ],
-
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -656,7 +653,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicButton__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

@@ -36,9 +36,37 @@
     min-width: 0;
   }
 }
-.navbar:global(.__wab_instance) {
+.freeBox__l3Jce {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.navbarMobile:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
+  width: 100%;
+  min-width: 0;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .navbarMobile:global(.__wab_instance) {
+    display: flex;
+  }
+}
+.navbar:global(.__wab_instance) {
+  max-width: 100%;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .navbar:global(.__wab_instance) {
+    display: none;
+  }
 }
 .headerHeroSection {
   display: flex;
@@ -218,9 +246,9 @@
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--token-VYT3CU8k-25c);
-  background: #ffffff;
-  border-radius: 10px;
+  color: var(--token-rvqSfmjWOZ82);
+  background: var(--token-WxvvgatuPYoJ);
+  border-radius: 100px;
   padding: 4px 8px;
 }
 .text__au9Ub {
@@ -233,6 +261,8 @@
   font-size: 20px;
   color: var(--token-VYT3CU8k-25c);
   line-height: 28px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
 }
 .freeBox__hvz1X {
   display: flex;
@@ -275,6 +305,7 @@
 }
 .button__iZdsi:global(.__wab_instance) {
   position: relative;
+  display: none;
 }
 .svg___9FT0 {
   width: 24px;
@@ -610,6 +641,13 @@
 .logoCloudSection:global(.__wab_instance) {
   position: relative;
 }
+.h2__akQen {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--token-Pxe4wDL2kJpb);
+  line-height: 1;
+  margin-bottom: 20px;
+}
 .freeBox__mYjn0 {
   max-width: var(--token-t6-EceW3Iy35);
   display: flex;
@@ -666,6 +704,7 @@
   left: auto;
   top: auto;
   height: 48px;
+  margin-left: calc(0px + 64px) !important;
 }
 .img__vvhap > picture > img {
   object-fit: cover;
@@ -678,16 +717,6 @@
   height: 48px;
 }
 .img__eiAqk > picture > img {
-  object-fit: cover;
-}
-.img___22Fk4 {
-  position: relative;
-  object-fit: cover;
-  left: auto;
-  top: auto;
-  height: 48px;
-}
-.img___22Fk4 > picture > img {
   object-fit: cover;
 }
 .faqSection:global(.__wab_instance) {
@@ -743,6 +772,7 @@
 .accordionItem__oJeGa:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  background: #ffffff;
 }
 .text__ckD3O {
   position: relative;
@@ -764,6 +794,7 @@
 .accordionItem___8W7LJ:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  background: #ffffff;
 }
 .text__aisrO {
   position: relative;

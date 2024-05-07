@@ -59,6 +59,7 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import NavbarMobile from "../../NavbarMobile"; // plasmic-import: RWEirKIQE6N-/component
 import Navbar from "../../Navbar"; // plasmic-import: l9zB0gKjLGnY/component
 import Button from "../../Button"; // plasmic-import: dBCQUhJCSZs2/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
@@ -79,9 +80,11 @@ import projectcss from "./plasmic.module.css"; // plasmic-import: e2Wrjg6Dz94Bkf
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: trPESwWzhIQ/css
 
 import AppleIcon from "./icons/PlasmicIcon__Apple"; // plasmic-import: 563f33iyx-K3/icon
-import ChevronRightIcon from "./icons/PlasmicIcon__ChevronRight"; // plasmic-import: HEPvTyIN4GhK/icon
+import ArrowRightToArcSolidsvgIcon from "./icons/PlasmicIcon__ArrowRightToArcSolidsvg"; // plasmic-import: elZYR_EjRN7S/icon
 import CircleNodesDuotone1SvgIcon from "./icons/PlasmicIcon__CircleNodesDuotone1Svg"; // plasmic-import: BPlNUGzXlC5h/icon
 import NewspaperDuotone1SvgIcon from "./icons/PlasmicIcon__NewspaperDuotone1Svg"; // plasmic-import: g1f9Vb9J7OUg/icon
+import BoxTapedDuotonesvgIcon from "./icons/PlasmicIcon__BoxTapedDuotonesvg"; // plasmic-import: MZSgSSNAE010/icon
+import VideoDuotone1Svg2Icon from "./icons/PlasmicIcon__VideoDuotone1Svg2"; // plasmic-import: SX7fL_KuJ8A-/icon
 import BullseyePointerDuotonesvgIcon from "./icons/PlasmicIcon__BullseyePointerDuotonesvg"; // plasmic-import: bZ2badIKOcLx/icon
 import EarthAmericasDuotonesvgIcon from "./icons/PlasmicIcon__EarthAmericasDuotonesvg"; // plasmic-import: H6Xnyi942ZBg/icon
 
@@ -98,6 +101,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  navbarMobile?: Flex__<typeof NavbarMobile>;
   navbar?: Flex__<typeof Navbar>;
   headerHeroSection?: Flex__<"div">;
   valuePropsSection?: Flex__<typeof Section>;
@@ -215,24 +219,50 @@ function PlasmicHomepage__RenderFunc(props: {
             )}
             id={"topNav"}
           >
-            <Navbar
-              data-plasmic-name={"navbar"}
-              data-plasmic-override={overrides.navbar}
-              className={classNames("__wab_instance", sty.navbar)}
-              scrolled={(() => {
-                try {
-                  return $ctx.isScrolled;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return [];
+            <div className={classNames(projectcss.all, sty.freeBox__l3Jce)}>
+              <NavbarMobile
+                data-plasmic-name={"navbarMobile"}
+                data-plasmic-override={overrides.navbarMobile}
+                className={classNames("__wab_instance", sty.navbarMobile)}
+                scrolled={(() => {
+                  try {
+                    return $ctx.isScrolled;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
                   }
-                  throw e;
+                })()}
+              />
+
+              <Navbar
+                data-plasmic-name={"navbar"}
+                data-plasmic-override={overrides.navbar}
+                className={classNames("__wab_instance", sty.navbar)}
+                hamburger={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? []
+                    : undefined
                 }
-              })()}
-            />
+                scrolled={(() => {
+                  try {
+                    return $ctx.isScrolled;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()}
+              />
+            </div>
           </div>
           <Stack__
             as={"div"}
@@ -313,7 +343,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                       color2={"darkGray"}
                       endIcon={
-                        <ChevronRightIcon
+                        <ArrowRightToArcSolidsvgIcon
                           className={classNames(projectcss.all, sty.svg___1BU3)}
                           role={"img"}
                         />
@@ -328,7 +358,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.text___0MlbS
                         )}
                       >
-                        {"Start now"}
+                        {"Launch App"}
                       </div>
                     </Button>
                     <Button
@@ -403,7 +433,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 )}
               >
                 {
-                  "Consectetur a adipiscing sagittis sed proin libero himenaeos ornare adipiscing suscipit leo vestibulum facilisi consequat nisi nisi adipiscing habitant facilisis suspendisse hac integer eget quam facilisis sem placerat fames."
+                  "Say goodbye to expensive infrastrcure, huge teams, and CMS headaches."
                 }
               </div>
               <Stack__
@@ -473,7 +503,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
                       }
                       icon={
-                        <CircleNodesDuotone1SvgIcon
+                        <BoxTapedDuotonesvgIcon
                           className={classNames(projectcss.all, sty.svg__ekm)}
                           role={"img"}
                         />
@@ -495,12 +525,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         "Consequat scelerisque a eros taciti nisl a sodales."
                       }
                       icon={
-                        <NewspaperDuotone1SvgIcon
+                        <VideoDuotone1Svg2Icon
                           className={classNames(projectcss.all, sty.svg__qZbCo)}
                           role={"img"}
                         />
                       }
-                      title={"Build Knowledge Products"}
+                      title={"Scale Creators Community"}
                       vertical={true}
                     />
                   </div>
@@ -567,6 +597,16 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.logoCloudSection}
             className={classNames("__wab_instance", sty.logoCloudSection)}
           >
+            <h2
+              className={classNames(
+                projectcss.all,
+                projectcss.h2,
+                projectcss.__wab_text,
+                sty.h2__akQen
+              )}
+            >
+              {"Powering global organizations"}
+            </h2>
             <Stack__
               as={"div"}
               hasGap={true}
@@ -582,10 +622,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinWidth={"0"}
                 displayWidth={"auto"}
                 src={{
-                  src: "/plasmic/daply_landing/images/loom.svg",
-                  fullWidth: 300,
-                  fullHeight: 91,
-                  aspectRatio: 3.303226
+                  src: "/plasmic/daply_landing/images/gltLogoSample1Png.png",
+                  fullWidth: 479,
+                  fullHeight: 141,
+                  aspectRatio: undefined
                 }}
               />
 
@@ -599,10 +639,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinWidth={"0"}
                 displayWidth={"auto"}
                 src={{
-                  src: "/plasmic/daply_landing/images/strapi.svg",
-                  fullWidth: 300,
-                  fullHeight: 78,
-                  aspectRatio: 3.849624
+                  src: "/plasmic/daply_landing/images/schooltubeCsl1Png.png",
+                  fullWidth: 612,
+                  fullHeight: 140,
+                  aspectRatio: undefined
                 }}
               />
 
@@ -616,10 +656,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinWidth={"0"}
                 displayWidth={"auto"}
                 src={{
-                  src: "/plasmic/daply_landing/images/segment.svg",
-                  fullWidth: 300,
-                  fullHeight: 62,
-                  aspectRatio: 4.87619
+                  src: "/plasmic/daply_landing/images/visionz1Png3.png",
+                  fullWidth: 519,
+                  fullHeight: 282,
+                  aspectRatio: undefined
                 }}
               />
 
@@ -633,27 +673,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinWidth={"0"}
                 displayWidth={"auto"}
                 src={{
-                  src: "/plasmic/daply_landing/images/xstate.svg",
-                  fullWidth: 300,
-                  fullHeight: 94,
-                  aspectRatio: 3.2
-                }}
-              />
-
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img___22Fk4)}
-                displayHeight={"48px"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"none"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                src={{
-                  src: "/plasmic/daply_landing/images/mapbox.svg",
-                  fullWidth: 300,
-                  fullHeight: 67,
-                  aspectRatio: 4.491228
+                  src: "/plasmic/daply_landing/images/lnUpIconWhiteGreen1Png.png",
+                  fullWidth: 221,
+                  fullHeight: 127,
+                  aspectRatio: undefined
                 }}
               />
             </Stack__>
@@ -801,6 +824,7 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "navbarMobile",
     "navbar",
     "headerHeroSection",
     "valuePropsSection",
@@ -809,6 +833,7 @@ const PlasmicDescendants = {
     "accordion2",
     "footerSection"
   ],
+  navbarMobile: ["navbarMobile"],
   navbar: ["navbar"],
   headerHeroSection: ["headerHeroSection"],
   valuePropsSection: ["valuePropsSection"],
@@ -822,6 +847,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  navbarMobile: typeof NavbarMobile;
   navbar: typeof Navbar;
   headerHeroSection: "div";
   valuePropsSection: typeof Section;
@@ -891,6 +917,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    navbarMobile: makeNodeComponent("navbarMobile"),
     navbar: makeNodeComponent("navbar"),
     headerHeroSection: makeNodeComponent("headerHeroSection"),
     valuePropsSection: makeNodeComponent("valuePropsSection"),
