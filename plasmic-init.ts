@@ -22,4 +22,4 @@ PLASMIC.registerGlobalContext(ScrollProvider, {
   name: "ScrollProvider",
   providesData: true,
   props: {},
-});
+}); 

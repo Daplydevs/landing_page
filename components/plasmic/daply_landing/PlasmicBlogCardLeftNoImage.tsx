@@ -139,8 +139,6 @@ function PlasmicBlogCardLeftNoImage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   return (
     <div
       data-plasmic-name={"root"}
@@ -244,7 +242,6 @@ function PlasmicBlogCardLeftNoImage__RenderFunc(props: {
                 </div>
               </React.Fragment>
             ),
-
             value: args.children
           })}
         </div>
@@ -320,7 +317,6 @@ function PlasmicBlogCardLeftNoImage__RenderFunc(props: {
                   </div>
                 </React.Fragment>
               ),
-
               value: args.children2
             })}
           </div>
@@ -359,7 +355,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicBlogCardLeftNoImage__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

@@ -41,8 +41,7 @@
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "YUiM7yqBWAqsh8KSnrdj7",
@@ -70,8 +69,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-query"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "8PtdGodUbexNYgkuyBUcWu",
@@ -93,8 +91,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "84wxoth5npGrp6RRXPL88z",
@@ -122,8 +119,7 @@
           "componentImportPath": "@plasmicpkgs/react-scroll-parallax"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "enk3K4vZ6pmH6kVCoZJXGn",
@@ -145,8 +141,7 @@
           "componentImportPath": "@plasmicpkgs/react-youtube"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -204,8 +199,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "hjKYmYi6HMwK6TRyk7ew5R",
@@ -263,8 +257,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-cms"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -286,8 +279,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "jkU633o1Cz7HrJdwdxhVHk",
@@ -341,8 +333,7 @@
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -742,8 +733,7 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
@@ -1094,6 +1084,19 @@
           "plumeType": "checkbox"
         },
         {
+          "id": "RWEirKIQE6N-",
+          "name": "NavbarMobile",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicNavbarMobile.tsx",
+          "importSpec": {
+            "modulePath": "NavbarMobile.tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicNavbarMobile.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
           "id": "trPESwWzhIQ",
           "name": "Homepage",
           "type": "managed",
@@ -1134,19 +1137,6 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/news"
-        },
-        {
-          "id": "RWEirKIQE6N-",
-          "name": "NavbarMobile",
-          "type": "managed",
-          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
-          "renderModuleFilePath": "plasmic/daply_landing/PlasmicNavbarMobile.tsx",
-          "importSpec": {
-            "modulePath": "NavbarMobile.tsx"
-          },
-          "cssFilePath": "plasmic/daply_landing/PlasmicNavbarMobile.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
         }
       ],
       "icons": [
@@ -1582,8 +1572,7 @@
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     }
   ],
   "globalVariants": {
@@ -1600,6 +1589,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.329",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.329/dist/plasmic.schema.json"
+  "cliVersion": "0.1.330",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.330/dist/plasmic.schema.json"
 }

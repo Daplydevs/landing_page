@@ -139,8 +139,6 @@ function PlasmicNavbar__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -201,7 +199,27 @@ function PlasmicNavbar__RenderFunc(props: {
           )
         })}
       >
-        <Logo className={classNames("__wab_instance", sty.logo__yLpSq)} />
+        <Logo
+          className={classNames("__wab_instance", sty.logo__yLpSq, {
+            [sty.logohamburger_open__yLpSqPKznc]: hasVariant(
+              $state,
+              "hamburger",
+              "open"
+            ),
+            [sty.logoscrolled__yLpSqxsAja]: hasVariant(
+              $state,
+              "scrolled",
+              "scrolled"
+            )
+          })}
+          white={
+            hasVariant($state, "hamburger", "open")
+              ? undefined
+              : hasVariant($state, "scrolled", "scrolled")
+              ? undefined
+              : true
+          }
+        />
       </div>
       <Button
         className={classNames("__wab_instance", sty.button__sxVii, {

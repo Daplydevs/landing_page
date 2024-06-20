@@ -148,8 +148,6 @@ function PlasmicCallToActionSection__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantseatfCtt4BrEn()
   });
@@ -296,7 +294,6 @@ function PlasmicCallToActionSection__RenderFunc(props: {
                     </Stack__>
                   </React.Fragment>
                 ),
-
                 value: args.children
               })}
             </Stack__>
@@ -330,7 +327,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicCallToActionSection__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

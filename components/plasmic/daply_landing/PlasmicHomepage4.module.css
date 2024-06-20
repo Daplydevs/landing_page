@@ -20,19 +20,8 @@
   min-width: 0;
   padding: 16px;
 }
-.navbar___4E9J2:global(.__wab_instance) {
+.navbar:global(.__wab_instance) {
   max-width: 100%;
-}
-.navbar__tegX:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-  width: auto;
-  align-self: flex-start;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .navbar__tegX:global(.__wab_instance) {
-    display: none;
-  }
 }
 .freeBox__eDfPy {
   display: flex;

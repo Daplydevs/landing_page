@@ -143,8 +143,6 @@ function PlasmicTestimonial__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   return (
     <Stack__
       as={"div"}
@@ -235,7 +233,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicTestimonial__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

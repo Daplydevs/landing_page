@@ -123,8 +123,6 @@ function PlasmicStatistic__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   return (
     <div
       data-plasmic-name={"root"}
@@ -154,7 +152,6 @@ function PlasmicStatistic__RenderFunc(props: {
             {"3,193"}
           </div>
         ),
-
         value: args.number,
         className: classNames(sty.slotTargetNumber)
       })}
@@ -175,7 +172,6 @@ function PlasmicStatistic__RenderFunc(props: {
               {"Active Users"}
             </div>
           ),
-
           value: args.unit
         })}
       </div>
@@ -200,7 +196,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicStatistic__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

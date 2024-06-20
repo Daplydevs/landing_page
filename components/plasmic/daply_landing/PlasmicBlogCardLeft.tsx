@@ -146,8 +146,6 @@ function PlasmicBlogCardLeft__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -158,7 +156,6 @@ function PlasmicBlogCardLeft__RenderFunc(props: {
           $props.leftImage2NoImage
       }
     ],
-
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -386,7 +383,6 @@ function PlasmicBlogCardLeft__RenderFunc(props: {
                 </div>
               </React.Fragment>
             ),
-
             value: args.children
           })}
         </div>
@@ -468,7 +464,6 @@ function PlasmicBlogCardLeft__RenderFunc(props: {
                   </div>
                 </React.Fragment>
               ),
-
               value: args.children2
             })}
           </div>
@@ -505,7 +500,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicBlogCardLeft__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

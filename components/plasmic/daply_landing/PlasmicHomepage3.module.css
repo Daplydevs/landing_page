@@ -22,20 +22,8 @@
   min-width: 0;
   padding: 16px;
 }
-.navbar__lzZwy:global(.__wab_instance) {
+.navbar:global(.__wab_instance) {
   max-width: 100%;
-}
-.navbar___6EU4G:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-  width: 100%;
-  align-self: flex-start;
-  min-width: 0;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .navbar___6EU4G:global(.__wab_instance) {
-    display: none;
-  }
 }
 .cmsDataFetcher__jI0Sp:global(.__wab_instance) {
   width: 100%;

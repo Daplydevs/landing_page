@@ -142,8 +142,6 @@ function PlasmicHomepage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -348,6 +346,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           role={"img"}
                         />
                       }
+                      link={"https://app.daply.co"}
                       showEndIcon={true}
                       submitsForm={true}
                     >
@@ -733,7 +732,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.text__ckD3O
                           )}
                         >
-                          {"First Item"}
+                          {"What types of content can we publish?"}
                         </div>
                       }
                       showArrow={true}
@@ -762,7 +761,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.text__aisrO
                           )}
                         >
-                          {"Second Item"}
+                          {"How do I get started?"}
                         </div>
                       }
                       showArrow={true}
@@ -772,6 +771,64 @@ function PlasmicHomepage__RenderFunc(props: {
                           projectcss.all,
                           projectcss.__wab_text,
                           sty.text__kheq5
+                        )}
+                      >
+                        {"Second Children"}
+                      </div>
+                    </AntdAccordionItem>
+                    <AntdAccordionItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.accordionItem__kp5HB
+                      )}
+                      id={2}
+                      label2={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__ydK6A
+                          )}
+                        >
+                          {"How much content can I produce?"}
+                        </div>
+                      }
+                      showArrow={true}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__jSJmB
+                        )}
+                      >
+                        {"Second Children"}
+                      </div>
+                    </AntdAccordionItem>
+                    <AntdAccordionItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.accordionItem__i2XPx
+                      )}
+                      id={2}
+                      label2={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__vVby
+                          )}
+                        >
+                          {"What are the benefits of Daply?"}
+                        </div>
+                      }
+                      showArrow={true}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__hUwsH
                         )}
                       >
                         {"Second Children"}

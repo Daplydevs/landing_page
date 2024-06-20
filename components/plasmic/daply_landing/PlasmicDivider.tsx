@@ -114,8 +114,6 @@ function PlasmicDivider__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   return (
     <div
       data-plasmic-name={"root"}
@@ -151,7 +149,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicDivider__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

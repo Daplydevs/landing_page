@@ -130,8 +130,6 @@ function PlasmicLogo__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -153,7 +151,6 @@ function PlasmicLogo__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.whiteLarge
       }
     ],
-
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -246,7 +243,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicLogo__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

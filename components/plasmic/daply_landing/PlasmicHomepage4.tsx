@@ -95,6 +95,7 @@ export const PlasmicHomepage4__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage4__OverridesType = {
   root?: Flex__<"div">;
+  navbar?: Flex__<typeof Navbar>;
   blogCardRightLarge?: Flex__<typeof BlogCardRightLarge>;
   blogCard?: Flex__<typeof BlogCard>;
   blogCardLarge?: Flex__<typeof BlogCardLarge>;
@@ -132,8 +133,6 @@ function PlasmicHomepage4__RenderFunc(props: {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-
-  const currentUser = useCurrentUser?.() || {};
 
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
@@ -199,11 +198,9 @@ function PlasmicHomepage4__RenderFunc(props: {
         >
           <div className={classNames(projectcss.all, sty.freeBox__cXn7F)}>
             <Navbar
-              className={classNames("__wab_instance", sty.navbar___4E9J2)}
-            />
-
-            <Navbar
-              className={classNames("__wab_instance", sty.navbar__tegX)}
+              data-plasmic-name={"navbar"}
+              data-plasmic-override={overrides.navbar}
+              className={classNames("__wab_instance", sty.navbar)}
             />
           </div>
           <Stack__
@@ -624,12 +621,14 @@ function PlasmicHomepage4__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "navbar",
     "blogCardRightLarge",
     "blogCard",
     "blogCardLarge",
     "callToActionSection",
     "footerSection"
   ],
+  navbar: ["navbar"],
   blogCardRightLarge: ["blogCardRightLarge"],
   blogCard: ["blogCard"],
   blogCardLarge: ["blogCardLarge"],
@@ -641,6 +640,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  navbar: typeof Navbar;
   blogCardRightLarge: typeof BlogCardRightLarge;
   blogCard: typeof BlogCard;
   blogCardLarge: typeof BlogCardLarge;
@@ -708,6 +708,7 @@ export const PlasmicHomepage4 = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    navbar: makeNodeComponent("navbar"),
     blogCardRightLarge: makeNodeComponent("blogCardRightLarge"),
     blogCard: makeNodeComponent("blogCard"),
     blogCardLarge: makeNodeComponent("blogCardLarge"),

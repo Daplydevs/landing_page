@@ -68,8 +68,6 @@ import CallToActionSection from "../../CallToActionSection"; // plasmic-import: 
 import Button from "../../Button"; // plasmic-import: dBCQUhJCSZs2/component
 import FooterSection from "../../FooterSection"; // plasmic-import: 7rGOkW3yxftm/component
 
-import { useScreenVariants as useScreenVariantseatfCtt4BrEn } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: eatfCTT4BrEN/globalVariant
-
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -94,6 +92,7 @@ export const PlasmicHomepage3__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage3__OverridesType = {
   root?: Flex__<"div">;
+  navbar?: Flex__<typeof Navbar>;
   h1?: Flex__<"h1">;
   svg?: Flex__<"svg">;
   video?: Flex__<typeof Video>;
@@ -134,8 +133,6 @@ function PlasmicHomepage3__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -152,10 +149,6 @@ function PlasmicHomepage3__RenderFunc(props: {
     $ctx,
     $queries: {},
     $refs
-  });
-
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantseatfCtt4BrEn()
   });
 
   return (
@@ -200,11 +193,9 @@ function PlasmicHomepage3__RenderFunc(props: {
         >
           <div className={classNames(projectcss.all, sty.freeBox__iUmsD)}>
             <Navbar
-              className={classNames("__wab_instance", sty.navbar__lzZwy)}
-            />
-
-            <Navbar
-              className={classNames("__wab_instance", sty.navbar___6EU4G)}
+              data-plasmic-name={"navbar"}
+              data-plasmic-override={overrides.navbar}
+              className={classNames("__wab_instance", sty.navbar)}
             />
           </div>
           <CmsQueryRepeater
@@ -603,6 +594,7 @@ function PlasmicHomepage3__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "navbar",
     "h1",
     "svg",
     "video",
@@ -611,6 +603,7 @@ const PlasmicDescendants = {
     "callToActionSection",
     "footerSection"
   ],
+  navbar: ["navbar"],
   h1: ["h1"],
   svg: ["svg"],
   video: ["video"],
@@ -624,6 +617,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  navbar: typeof Navbar;
   h1: "h1";
   svg: "svg";
   video: typeof Video;
@@ -693,6 +687,7 @@ export const PlasmicHomepage3 = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    navbar: makeNodeComponent("navbar"),
     h1: makeNodeComponent("h1"),
     svg: makeNodeComponent("svg"),
     video: makeNodeComponent("video"),
