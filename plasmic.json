@@ -41,7 +41,8 @@
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "YUiM7yqBWAqsh8KSnrdj7",
@@ -69,7 +70,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-query"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "8PtdGodUbexNYgkuyBUcWu",
@@ -91,7 +93,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "84wxoth5npGrp6RRXPL88z",
@@ -119,7 +122,8 @@
           "componentImportPath": "@plasmicpkgs/react-scroll-parallax"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "enk3K4vZ6pmH6kVCoZJXGn",
@@ -141,7 +145,8 @@
           "componentImportPath": "@plasmicpkgs/react-youtube"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -199,7 +204,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "hjKYmYi6HMwK6TRyk7ew5R",
@@ -257,7 +263,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-cms"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -279,7 +286,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "jkU633o1Cz7HrJdwdxhVHk",
@@ -333,7 +341,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -733,7 +742,8 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
@@ -1097,20 +1107,6 @@
           "componentType": "component"
         },
         {
-          "id": "trPESwWzhIQ",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
-          "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/index.tsx"
-          },
-          "cssFilePath": "plasmic/daply_landing/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/"
-        },
-        {
           "id": "loGveCNgEVMe",
           "name": "Homepage3",
           "type": "managed",
@@ -1125,6 +1121,20 @@
           "path": "/article/[title]"
         },
         {
+          "id": "trPESwWzhIQ",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
+        },
+        {
           "id": "YQCYqHksciRi",
           "name": "Homepage4",
           "type": "managed",
@@ -1137,6 +1147,34 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/news"
+        },
+        {
+          "id": "iDVRRue3D7TP",
+          "name": "NewPage",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicNewPage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/sample.tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicNewPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/sample"
+        },
+        {
+          "id": "eadqT1yXoaKl",
+          "name": "Button2",
+          "type": "managed",
+          "projectId": "e2Wrjg6Dz94BkfogsCYoEo",
+          "renderModuleFilePath": "plasmic/daply_landing/PlasmicButton2.tsx",
+          "importSpec": {
+            "modulePath": "Button2.tsx"
+          },
+          "cssFilePath": "plasmic/daply_landing/PlasmicButton2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
         }
       ],
       "icons": [
@@ -1329,6 +1367,16 @@
           "id": "SX7fL_KuJ8A-",
           "name": "VideoDuotone1Svg2Icon",
           "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__VideoDuotone1Svg2.tsx"
+        },
+        {
+          "id": "GGtbIZKsRvvr",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__Icon.tsx"
+        },
+        {
+          "id": "16eBXsy56po_",
+          "name": "Icon2Icon",
+          "moduleFilePath": "plasmic/daply_landing/icons/PlasmicIcon__Icon2.tsx"
         }
       ],
       "images": [
@@ -1521,6 +1569,156 @@
           "id": "hWQhO0-XlyBN",
           "name": "visionz 1.png 3",
           "filePath": "../public/plasmic/daply_landing/images/visionz1Png3.png"
+        },
+        {
+          "id": "vd0dV7bP5BDZ",
+          "name": "get started.png",
+          "filePath": "../public/plasmic/daply_landing/images/getStartedpng.png"
+        },
+        {
+          "id": "-r8DYxJx2qeD",
+          "name": "Daply Hub overview.png",
+          "filePath": "../public/plasmic/daply_landing/images/daplyHubOverviewpng.png"
+        },
+        {
+          "id": "mLQokjT9dsvo",
+          "name": "image",
+          "filePath": "../public/plasmic/daply_landing/images/image.svg"
+        },
+        {
+          "id": "2G3QANfJfki4",
+          "name": "image 2",
+          "filePath": "../public/plasmic/daply_landing/images/image2.jpg"
+        },
+        {
+          "id": "lf1dVL_-dz4P",
+          "name": "image 3",
+          "filePath": "../public/plasmic/daply_landing/images/image3.avif"
+        },
+        {
+          "id": "p8wEGNTrcChz",
+          "name": "image 4",
+          "filePath": "../public/plasmic/daply_landing/images/image4.webp"
+        },
+        {
+          "id": "KVQZX5gEQncm",
+          "name": "image 5",
+          "filePath": "../public/plasmic/daply_landing/images/image5.jpg"
+        },
+        {
+          "id": "IrMrIfj7mGIG",
+          "name": "image 6",
+          "filePath": "../public/plasmic/daply_landing/images/image6.avif"
+        },
+        {
+          "id": "K0J2CF_SzufG",
+          "name": "image 7",
+          "filePath": "../public/plasmic/daply_landing/images/image7.png"
+        },
+        {
+          "id": "RRXZgnxeHO0n",
+          "name": "image 8",
+          "filePath": "../public/plasmic/daply_landing/images/image8.jpg"
+        },
+        {
+          "id": "DbpQIipQMKxz",
+          "name": "image 9",
+          "filePath": "../public/plasmic/daply_landing/images/image9.jpg"
+        },
+        {
+          "id": "bMjsYfPTeXfZ",
+          "name": "image 10",
+          "filePath": "../public/plasmic/daply_landing/images/image10.jpg"
+        },
+        {
+          "id": "zlu8Qz7zkOqD",
+          "name": "image 11",
+          "filePath": "../public/plasmic/daply_landing/images/image11.webp"
+        },
+        {
+          "id": "i9SboHlstNYF",
+          "name": "image 12",
+          "filePath": "../public/plasmic/daply_landing/images/image12.webp"
+        },
+        {
+          "id": "bBHYkAuz1tec",
+          "name": "image 13",
+          "filePath": "../public/plasmic/daply_landing/images/image13.jpg"
+        },
+        {
+          "id": "g-n69QGsx_O6",
+          "name": "image 14",
+          "filePath": "../public/plasmic/daply_landing/images/image14.jpg"
+        },
+        {
+          "id": "VZmIRJzQ63c9",
+          "name": "image 15",
+          "filePath": "../public/plasmic/daply_landing/images/image15.jpg"
+        },
+        {
+          "id": "DzEeyLlOcUmr",
+          "name": "image 16",
+          "filePath": "../public/plasmic/daply_landing/images/image16.jpg"
+        },
+        {
+          "id": "Hyr6RsFiVJgt",
+          "name": "image 17",
+          "filePath": "../public/plasmic/daply_landing/images/image17.png"
+        },
+        {
+          "id": "iZXUW5BIpNvY",
+          "name": "image 18",
+          "filePath": "../public/plasmic/daply_landing/images/image18.avif"
+        },
+        {
+          "id": "T3liy56O-40n",
+          "name": "image 19",
+          "filePath": "../public/plasmic/daply_landing/images/image19.png"
+        },
+        {
+          "id": "XpgIkHN-Ex8g",
+          "name": "image 20",
+          "filePath": "../public/plasmic/daply_landing/images/image20.avif"
+        },
+        {
+          "id": "uzFm6nSxDumU",
+          "name": "image 21",
+          "filePath": "../public/plasmic/daply_landing/images/image21.png"
+        },
+        {
+          "id": "rTZY5MyxAIMf",
+          "name": "image 22",
+          "filePath": "../public/plasmic/daply_landing/images/image22.png"
+        },
+        {
+          "id": "TFyp39iFTWlI",
+          "name": "image 23",
+          "filePath": "../public/plasmic/daply_landing/images/image23.svg"
+        },
+        {
+          "id": "Z15PsFPMmkBk",
+          "name": "image 24",
+          "filePath": "../public/plasmic/daply_landing/images/image24.png"
+        },
+        {
+          "id": "QxWMPkAidLaZ",
+          "name": "image 25",
+          "filePath": "../public/plasmic/daply_landing/images/image25.png"
+        },
+        {
+          "id": "FwajdfWSHQhG",
+          "name": "image 26",
+          "filePath": "../public/plasmic/daply_landing/images/image26.png"
+        },
+        {
+          "id": "tk0r-PZAhxQ0",
+          "name": "image 27",
+          "filePath": "../public/plasmic/daply_landing/images/image27.jpg"
+        },
+        {
+          "id": "t4g4DCuL1ecS",
+          "name": "image 28",
+          "filePath": "../public/plasmic/daply_landing/images/image28.jpg"
         }
       ],
       "indirect": false,
@@ -1572,7 +1770,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {

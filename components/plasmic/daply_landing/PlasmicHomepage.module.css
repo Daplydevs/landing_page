@@ -50,8 +50,11 @@
 }
 .navbarMobile:global(.__wab_instance) {
   max-width: 100%;
-  position: relative;
+  position: sticky;
   width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
   min-width: 0;
   display: none;
 }
@@ -62,6 +65,10 @@
 }
 .navbar:global(.__wab_instance) {
   max-width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  position: sticky;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .navbar:global(.__wab_instance) {
@@ -352,13 +359,23 @@
   max-width: 100%;
   object-fit: cover;
   position: relative;
-  background: var(--token-xNv4NilEXhqh);
+  background: var(--token-41VRhDKfihhY);
   border-radius: 20px;
   padding: 20px;
   border-width: 0px;
 }
-.valuePropsSection:global(.__wab_instance) {
+.freeBox__woOl {
+  display: flex;
   position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  background: #ffffff;
+  min-width: 0;
+  padding: 8px;
 }
 .freeBox__mY8 {
   max-width: var(--token-t6-EceW3Iy35);
@@ -725,9 +742,33 @@
 .img__eiAqk > picture > img {
   object-fit: cover;
 }
+.img__zqqaK {
+  position: relative;
+  object-fit: contain;
+  max-width: 100%;
+  height: 478px;
+  margin-top: calc(71px + 10px) !important;
+}
+.img__zqqaK > picture > img {
+  object-fit: contain;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .img__zqqaK {
+    object-fit: contain;
+    margin-top: calc(0px + 10px) !important;
+    height: 258px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .img__zqqaK > picture > img {
+    object-fit: contain;
+  }
+}
 .faqSection:global(.__wab_instance) {
   position: relative;
   height: auto;
+  width: 100%;
+  min-width: 0;
 }
 .freeBox__k1HeW {
   max-width: var(--token-t6-EceW3Iy35);
@@ -795,6 +836,7 @@
   max-width: 100%;
   font-size: 18px;
   font-weight: 500;
+  padding-right: 0px;
   min-width: 0;
 }
 .accordionItem___8W7LJ:global(.__wab_instance) {
@@ -817,6 +859,16 @@
   font-size: 18px;
   font-weight: 500;
   min-width: 0;
+}
+.img__lRp2K {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  min-width: 0;
+}
+.img__lRp2K > picture > img {
+  object-fit: cover;
 }
 .accordionItem__kp5HB:global(.__wab_instance) {
   max-width: 100%;

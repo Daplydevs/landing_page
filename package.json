@@ -11,7 +11,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.3.6",
     "@ant-design/pro-components": "^2.6.4",
-    "@plasmicapp/cli": "^0.1.329",
+    "@plasmicapp/cli": "^0.1.330",
     "@plasmicapp/loader-nextjs": "^1.0.365",
     "@plasmicapp/react-web": "^0.2.327",
     "@plasmicpkgs/antd5": "^0.0.222",
