@@ -473,7 +473,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                         colored={true}
                         description={
-                          "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
+                          "We make it easy to connect your content pipeline to multiple workflows."
                         }
                         icon={
                           <CircleNodesDuotone1SvgIcon
@@ -497,9 +497,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.valueProp__yqk44
                         )}
                         colored={true}
-                        description={
-                          "Consequat scelerisque a eros taciti nisl a sodales."
-                        }
+                        description={"Automate content production at scale."}
                         icon={
                           <NewspaperDuotone1SvgIcon
                             className={classNames(
@@ -523,7 +521,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                         colored={true}
                         description={
-                          "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
+                          "Repackage and multiply your publishing channels to maximize the value of your content."
                         }
                         icon={
                           <BoxTapedDuotonesvgIcon
@@ -545,7 +543,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                         colored={true}
                         description={
-                          "Consequat scelerisque a eros taciti nisl a sodales."
+                          "Easily work with a decentralized community of creators to generate original content."
                         }
                         icon={
                           <VideoDuotone1Svg2Icon
@@ -570,7 +568,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                         colored={true}
                         description={
-                          "At ut condimentum amet adipiscing ac diam a."
+                          "Increase brand engagement and sponsorship opportunities. "
                         }
                         icon={
                           <BullseyePointerDuotonesvgIcon
@@ -595,7 +593,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                         colored={true}
                         description={
-                          "Donec purus nec vestibulum volutpat vivamus vulputate suspendisse."
+                          "Expand the global footprint with audience from around the world."
                         }
                         icon={
                           <EarthAmericasDuotonesvgIcon
