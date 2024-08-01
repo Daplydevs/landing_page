@@ -240,9 +240,9 @@ function PlasmicNavbar__RenderFunc(props: {
         onClick={async event => {
           const $steps = {};
 
-          $steps["goToPage"] = true
+          $steps["goToHttpsappdaplyco"] = true
             ? (() => {
-                const actionArgs = {};
+                const actionArgs = { destination: "https://app.daply.co" };
                 return (({ destination }) => {
                   if (
                     typeof destination === "string" &&
@@ -258,11 +258,11 @@ function PlasmicNavbar__RenderFunc(props: {
               })()
             : undefined;
           if (
-            $steps["goToPage"] != null &&
-            typeof $steps["goToPage"] === "object" &&
-            typeof $steps["goToPage"].then === "function"
+            $steps["goToHttpsappdaplyco"] != null &&
+            typeof $steps["goToHttpsappdaplyco"] === "object" &&
+            typeof $steps["goToHttpsappdaplyco"].then === "function"
           ) {
-            $steps["goToPage"] = await $steps["goToPage"];
+            $steps["goToHttpsappdaplyco"] = await $steps["goToHttpsappdaplyco"];
           }
 
           $steps["updateStateVariable"] = true
@@ -288,7 +288,15 @@ function PlasmicNavbar__RenderFunc(props: {
         showEndIcon={true}
         submitsForm={true}
       >
-        {"Launch  App"}
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text__mVkEg
+          )}
+        >
+          {"Launch  App"}
+        </div>
       </Button>
       <PlasmicLink__
         data-plasmic-name={"hamburger2"}

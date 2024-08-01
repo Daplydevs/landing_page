@@ -364,6 +364,39 @@ function PlasmicHomepage__RenderFunc(props: {
                         />
                       }
                       link={"https://app.daply.co"}
+                      onClick={async event => {
+                        const $steps = {};
+
+                        $steps["goToHttpsappdaplyco"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                destination: "https://app.daply.co"
+                              };
+                              return (({ destination }) => {
+                                if (
+                                  typeof destination === "string" &&
+                                  destination.startsWith("#")
+                                ) {
+                                  document
+                                    .getElementById(destination.substr(1))
+                                    .scrollIntoView({ behavior: "smooth" });
+                                } else {
+                                  __nextRouter?.push(destination);
+                                }
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["goToHttpsappdaplyco"] != null &&
+                          typeof $steps["goToHttpsappdaplyco"] === "object" &&
+                          typeof $steps["goToHttpsappdaplyco"].then ===
+                            "function"
+                        ) {
+                          $steps["goToHttpsappdaplyco"] = await $steps[
+                            "goToHttpsappdaplyco"
+                          ];
+                        }
+                      }}
                       showEndIcon={true}
                       submitsForm={true}
                       target={true}
