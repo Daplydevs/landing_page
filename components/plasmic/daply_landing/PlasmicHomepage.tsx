@@ -184,6 +184,23 @@ function PlasmicHomepage__RenderFunc(props: {
           name="twitter:title"
           content={PlasmicHomepage.pageMetadata.title}
         />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+
+        <link ref="canonical" href={PlasmicHomepage.pageMetadata.canonical} />
       </Head>
 
       <style>{`
@@ -347,6 +364,39 @@ function PlasmicHomepage__RenderFunc(props: {
                         />
                       }
                       link={"https://app.daply.co"}
+                      onClick={async event => {
+                        const $steps = {};
+
+                        $steps["goToHttpsappdaplyco"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                destination: "https://app.daply.co"
+                              };
+                              return (({ destination }) => {
+                                if (
+                                  typeof destination === "string" &&
+                                  destination.startsWith("#")
+                                ) {
+                                  document
+                                    .getElementById(destination.substr(1))
+                                    .scrollIntoView({ behavior: "smooth" });
+                                } else {
+                                  __nextRouter?.push(destination);
+                                }
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["goToHttpsappdaplyco"] != null &&
+                          typeof $steps["goToHttpsappdaplyco"] === "object" &&
+                          typeof $steps["goToHttpsappdaplyco"].then ===
+                            "function"
+                        ) {
+                          $steps["goToHttpsappdaplyco"] = await $steps[
+                            "goToHttpsappdaplyco"
+                          ];
+                        }
+                      }}
                       showEndIcon={true}
                       submitsForm={true}
                       target={true}
@@ -395,7 +445,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 <Embed
                   className={classNames("__wab_instance", sty.embedHtml__tL4P0)}
                   code={
-                    '<iframe class="rounded-iframe" data-tally-src="https://tally.so/embed/wg5WLM?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="Start scaling your content today"></iframe>\r\n\r\n<script>\r\n    var d = document,\r\n        w = "https://tally.so/widgets/embed.js",\r\n        v = function () {\r\n            "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) {\r\n                e.src = e.dataset.tallySrc\r\n            }))\r\n        };\r\n    if ("undefined" != typeof Tally) v();\r\n    else if (d.querySelector(\'script[src="\' + w + \'"]\') == null) {\r\n        var s = d.createElement("script");\r\n        s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s)\r\n    };\r\n</script>\r\n\r\n<style>\r\n    .rounded-iframe {\r\n        border-radius: 10px;\r\n        overflow: hidden;\r\n    }\r\n</style>\r\n'
+                    '<iframe data-tally-src="https://tally.so/embed/3lAQxv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Start scaling your content today"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector(\'script[src="\'+w+\'"]\')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>'
                   }
                 />
               </div>
@@ -456,7 +506,11 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                         colored={true}
                         description={
+<<<<<<< HEAD
                           "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
+=======
+                          "We make it easy to connect your content pipeline to multiple workflows."
+>>>>>>> origin/main
                         }
                         icon={
                           <CircleNodesDuotone1SvgIcon
@@ -480,9 +534,13 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.valueProp__yqk44
                         )}
                         colored={true}
+<<<<<<< HEAD
                         description={
                           "Consequat scelerisque a eros taciti nisl a sodales."
                         }
+=======
+                        description={"Automate content production at scale."}
+>>>>>>> origin/main
                         icon={
                           <NewspaperDuotone1SvgIcon
                             className={classNames(
@@ -506,7 +564,11 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                         colored={true}
                         description={
+<<<<<<< HEAD
                           "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
+=======
+                          "Repackage and multiply your publishing channels to maximize the value of your content."
+>>>>>>> origin/main
                         }
                         icon={
                           <BoxTapedDuotonesvgIcon
@@ -528,7 +590,11 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                         colored={true}
                         description={
+<<<<<<< HEAD
                           "Consequat scelerisque a eros taciti nisl a sodales."
+=======
+                          "Easily work with a decentralized community of creators to generate original content."
+>>>>>>> origin/main
                         }
                         icon={
                           <VideoDuotone1Svg2Icon
@@ -553,7 +619,11 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                         colored={true}
                         description={
+<<<<<<< HEAD
                           "At ut condimentum amet adipiscing ac diam a."
+=======
+                          "Increase brand engagement and sponsorship opportunities. "
+>>>>>>> origin/main
                         }
                         icon={
                           <BullseyePointerDuotonesvgIcon
@@ -578,7 +648,11 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                         colored={true}
                         description={
+<<<<<<< HEAD
                           "Donec purus nec vestibulum volutpat vivamus vulputate suspendisse."
+=======
+                          "Expand the global footprint with audience from around the world."
+>>>>>>> origin/main
                         }
                         icon={
                           <EarthAmericasDuotonesvgIcon
@@ -1055,9 +1129,10 @@ export const PlasmicHomepage = Object.assign(
     // Page metadata
     pageMetadata: {
       title: "The Content Scaling Engine | Daply",
-      description: "",
+      description:
+        "Scale your content production and monetization potential with Daply. ",
       ogImageSrc: "",
-      canonical: ""
+      canonical: "https://daply.co"
     }
   }
 );

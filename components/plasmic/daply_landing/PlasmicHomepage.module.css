@@ -50,8 +50,11 @@
 }
 .navbarMobile:global(.__wab_instance) {
   max-width: 100%;
-  position: relative;
+  position: sticky;
   width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
   min-width: 0;
   display: none;
 }
@@ -62,6 +65,10 @@
 }
 .navbar:global(.__wab_instance) {
   max-width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  position: sticky;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .navbar:global(.__wab_instance) {
@@ -352,7 +359,7 @@
   max-width: 100%;
   object-fit: cover;
   position: relative;
-  background: var(--token-xNv4NilEXhqh);
+  background: var(--token-41VRhDKfihhY);
   border-radius: 20px;
   padding: 20px;
   border-width: 0px;

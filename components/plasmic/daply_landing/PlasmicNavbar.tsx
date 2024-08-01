@@ -240,9 +240,15 @@ function PlasmicNavbar__RenderFunc(props: {
         onClick={async event => {
           const $steps = {};
 
+<<<<<<< HEAD
           $steps["goToPage"] = true
             ? (() => {
                 const actionArgs = {};
+=======
+          $steps["goToHttpsappdaplyco"] = true
+            ? (() => {
+                const actionArgs = { destination: "https://app.daply.co" };
+>>>>>>> origin/main
                 return (({ destination }) => {
                   if (
                     typeof destination === "string" &&
@@ -258,11 +264,19 @@ function PlasmicNavbar__RenderFunc(props: {
               })()
             : undefined;
           if (
+<<<<<<< HEAD
             $steps["goToPage"] != null &&
             typeof $steps["goToPage"] === "object" &&
             typeof $steps["goToPage"].then === "function"
           ) {
             $steps["goToPage"] = await $steps["goToPage"];
+=======
+            $steps["goToHttpsappdaplyco"] != null &&
+            typeof $steps["goToHttpsappdaplyco"] === "object" &&
+            typeof $steps["goToHttpsappdaplyco"].then === "function"
+          ) {
+            $steps["goToHttpsappdaplyco"] = await $steps["goToHttpsappdaplyco"];
+>>>>>>> origin/main
           }
 
           $steps["updateStateVariable"] = true
@@ -288,7 +302,15 @@ function PlasmicNavbar__RenderFunc(props: {
         showEndIcon={true}
         submitsForm={true}
       >
-        {"Launch  App"}
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text__mVkEg
+          )}
+        >
+          {"Launch  App"}
+        </div>
       </Button>
       <PlasmicLink__
         data-plasmic-name={"hamburger2"}

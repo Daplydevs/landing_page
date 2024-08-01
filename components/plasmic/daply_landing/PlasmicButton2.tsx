@@ -149,6 +149,10 @@ export type PlasmicButton2__ArgsType = {
   endIcon?: React.ReactNode;
   link?: string;
   submitsForm?: boolean;
+<<<<<<< HEAD
+=======
+  target?: boolean;
+>>>>>>> origin/main
 };
 type ArgPropType = keyof PlasmicButton2__ArgsType;
 export const PlasmicButton2__ArgProps = new Array<ArgPropType>(
@@ -156,7 +160,12 @@ export const PlasmicButton2__ArgProps = new Array<ArgPropType>(
   "children",
   "endIcon",
   "link",
+<<<<<<< HEAD
   "submitsForm"
+=======
+  "submitsForm",
+  "target"
+>>>>>>> origin/main
 );
 
 export type PlasmicButton2__OverridesType = {
@@ -165,6 +174,10 @@ export type PlasmicButton2__OverridesType = {
 
 export interface DefaultButton2Props extends pp.BaseButtonProps {
   submitsForm?: boolean;
+<<<<<<< HEAD
+=======
+  target?: boolean;
+>>>>>>> origin/main
   color?: SingleChoiceArg<
     | "green"
     | "indigo"
