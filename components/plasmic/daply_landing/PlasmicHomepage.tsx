@@ -148,7 +148,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "accordion2.activePanelId",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "1",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ``,
 
         onMutate: generateOnMutateForSpec(
           "activePanelId",
@@ -325,7 +325,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "We make it easy to aggregate information and tailor highly specific content to meet your needs. "
+                        "We make it easy for publishers and media companies to scale content production and earn more revenue. "
                       }
                     </div>
                   </Stack__>
@@ -349,6 +349,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       link={"https://app.daply.co"}
                       showEndIcon={true}
                       submitsForm={true}
+                      target={true}
                     >
                       <div
                         className={classNames(
@@ -400,472 +401,536 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </Stack__>
           </Stack__>
-          <Section
-            data-plasmic-name={"valuePropsSection"}
-            data-plasmic-override={overrides.valuePropsSection}
-            background={"white"}
-            className={classNames("__wab_instance", sty.valuePropsSection)}
-            size={"fullContentWidth"}
-          >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__mY8)}
+          <div className={classNames(projectcss.all, sty.freeBox__woOl)}>
+            <Section
+              data-plasmic-name={"valuePropsSection"}
+              data-plasmic-override={overrides.valuePropsSection}
+              background={"white"}
+              size={"fullContentWidth"}
             >
-              <div className={classNames(projectcss.all, sty.freeBox__p9KU)}>
-                <h2
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h2,
-                    projectcss.__wab_text,
-                    sty.h2__mKMsT
-                  )}
-                >
-                  {"Scale your content effortlessly"}
-                </h2>
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__ox0E9
-                )}
-              >
-                {
-                  "Say goodbye to expensive infrastrcure, huge teams, and CMS headaches."
-                }
-              </div>
               <Stack__
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__li3Ns)}
+                className={classNames(projectcss.all, sty.freeBox__mY8)}
               >
+                <div className={classNames(projectcss.all, sty.freeBox__p9KU)}>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__mKMsT
+                    )}
+                  >
+                    {"Effortless Publishing at Scale"}
+                  </h2>
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__ox0E9
+                  )}
+                >
+                  {
+                    "Say goodbye to expensive infrastrcure, huge teams, and CMS headaches."
+                  }
+                </div>
                 <Stack__
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.columns__gbo8C)}
+                  className={classNames(projectcss.all, sty.freeBox__li3Ns)}
                 >
-                  <div
-                    className={classNames(projectcss.all, sty.column__r4UGk)}
+                  <Stack__
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.columns__gbo8C)}
                   >
-                    <ValueProp
-                      className={classNames(
-                        "__wab_instance",
-                        sty.valueProp__mwUfr
-                      )}
-                      colored={true}
-                      description={
-                        "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
-                      }
-                      icon={
-                        <CircleNodesDuotone1SvgIcon
-                          className={classNames(projectcss.all, sty.svg__umOWr)}
-                          role={"img"}
-                        />
-                      }
-                      title={"Aggregated Data Sources"}
-                      vertical={true}
-                    />
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column__oroAj)}
-                  >
-                    <ValueProp
-                      className={classNames(
-                        "__wab_instance",
-                        sty.valueProp__yqk44
-                      )}
-                      colored={true}
-                      description={
-                        "Consequat scelerisque a eros taciti nisl a sodales."
-                      }
-                      icon={
-                        <NewspaperDuotone1SvgIcon
-                          className={classNames(projectcss.all, sty.svg__dbmRu)}
-                          role={"img"}
-                        />
-                      }
-                      title={"Content Production Autopilot"}
-                      vertical={true}
-                    />
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column__kwl2G)}
-                  >
-                    <ValueProp
-                      className={classNames(
-                        "__wab_instance",
-                        sty.valueProp__mpfn1
-                      )}
-                      colored={true}
-                      description={
-                        "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
-                      }
-                      icon={
-                        <BoxTapedDuotonesvgIcon
-                          className={classNames(projectcss.all, sty.svg__ekm)}
-                          role={"img"}
-                        />
-                      }
-                      title={"Repacked Content"}
-                      vertical={true}
-                    />
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column__wRwCu)}
-                  >
-                    <ValueProp
-                      className={classNames(
-                        "__wab_instance",
-                        sty.valueProp__o8YEi
-                      )}
-                      colored={true}
-                      description={
-                        "Consequat scelerisque a eros taciti nisl a sodales."
-                      }
-                      icon={
-                        <VideoDuotone1Svg2Icon
-                          className={classNames(projectcss.all, sty.svg__qZbCo)}
-                          role={"img"}
-                        />
-                      }
-                      title={"Scale Creators Community"}
-                      vertical={true}
-                    />
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column__kqdur)}
-                  >
-                    <ValueProp
-                      className={classNames(
-                        "__wab_instance",
-                        sty.valueProp__zmdro
-                      )}
-                      colored={true}
-                      description={
-                        "At ut condimentum amet adipiscing ac diam a."
-                      }
-                      icon={
-                        <BullseyePointerDuotonesvgIcon
-                          className={classNames(projectcss.all, sty.svg__eh5CJ)}
-                          role={"img"}
-                        />
-                      }
-                      title={"Increase Brand Engagement"}
-                      vertical={true}
-                    />
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column__yZv5J)}
-                  >
-                    <ValueProp
-                      className={classNames(
-                        "__wab_instance",
-                        sty.valueProp__wxb7N
-                      )}
-                      colored={true}
-                      description={
-                        "Donec purus nec vestibulum volutpat vivamus vulputate suspendisse."
-                      }
-                      icon={
-                        <EarthAmericasDuotonesvgIcon
-                          className={classNames(projectcss.all, sty.svg__jv1F)}
-                          role={"img"}
-                        />
-                      }
-                      title={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__vCzxf
-                          )}
-                        >
-                          {"Reach Global Audiences"}
-                        </div>
-                      }
-                      vertical={true}
-                    />
-                  </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column__r4UGk)}
+                    >
+                      <ValueProp
+                        className={classNames(
+                          "__wab_instance",
+                          sty.valueProp__mwUfr
+                        )}
+                        colored={true}
+                        description={
+                          "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
+                        }
+                        icon={
+                          <CircleNodesDuotone1SvgIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__umOWr
+                            )}
+                            role={"img"}
+                          />
+                        }
+                        title={"Aggregated Data Sources"}
+                        vertical={true}
+                      />
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column__oroAj)}
+                    >
+                      <ValueProp
+                        className={classNames(
+                          "__wab_instance",
+                          sty.valueProp__yqk44
+                        )}
+                        colored={true}
+                        description={
+                          "Consequat scelerisque a eros taciti nisl a sodales."
+                        }
+                        icon={
+                          <NewspaperDuotone1SvgIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__dbmRu
+                            )}
+                            role={"img"}
+                          />
+                        }
+                        title={"Content Production Autopilot"}
+                        vertical={true}
+                      />
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column__kwl2G)}
+                    >
+                      <ValueProp
+                        className={classNames(
+                          "__wab_instance",
+                          sty.valueProp__mpfn1
+                        )}
+                        colored={true}
+                        description={
+                          "Nulla odio mauris enim parturient adipiscing vestibulum inceptos."
+                        }
+                        icon={
+                          <BoxTapedDuotonesvgIcon
+                            className={classNames(projectcss.all, sty.svg__ekm)}
+                            role={"img"}
+                          />
+                        }
+                        title={"Repacked Content"}
+                        vertical={true}
+                      />
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column__wRwCu)}
+                    >
+                      <ValueProp
+                        className={classNames(
+                          "__wab_instance",
+                          sty.valueProp__o8YEi
+                        )}
+                        colored={true}
+                        description={
+                          "Consequat scelerisque a eros taciti nisl a sodales."
+                        }
+                        icon={
+                          <VideoDuotone1Svg2Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__qZbCo
+                            )}
+                            role={"img"}
+                          />
+                        }
+                        title={"Scale Creators Community"}
+                        vertical={true}
+                      />
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column__kqdur)}
+                    >
+                      <ValueProp
+                        className={classNames(
+                          "__wab_instance",
+                          sty.valueProp__zmdro
+                        )}
+                        colored={true}
+                        description={
+                          "At ut condimentum amet adipiscing ac diam a."
+                        }
+                        icon={
+                          <BullseyePointerDuotonesvgIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__eh5CJ
+                            )}
+                            role={"img"}
+                          />
+                        }
+                        title={"Increase Brand Engagement"}
+                        vertical={true}
+                      />
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column__yZv5J)}
+                    >
+                      <ValueProp
+                        className={classNames(
+                          "__wab_instance",
+                          sty.valueProp__wxb7N
+                        )}
+                        colored={true}
+                        description={
+                          "Donec purus nec vestibulum volutpat vivamus vulputate suspendisse."
+                        }
+                        icon={
+                          <EarthAmericasDuotonesvgIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__jv1F
+                            )}
+                            role={"img"}
+                          />
+                        }
+                        title={
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__vCzxf
+                            )}
+                          >
+                            {"Reach Global Audiences"}
+                          </div>
+                        }
+                        vertical={true}
+                      />
+                    </div>
+                  </Stack__>
                 </Stack__>
               </Stack__>
-            </Stack__>
-          </Section>
-          <Section
-            data-plasmic-name={"logoCloudSection"}
-            data-plasmic-override={overrides.logoCloudSection}
-            className={classNames("__wab_instance", sty.logoCloudSection)}
-          >
-            <h2
-              className={classNames(
-                projectcss.all,
-                projectcss.h2,
-                projectcss.__wab_text,
-                sty.h2__akQen
-              )}
+            </Section>
+            <Section
+              data-plasmic-name={"logoCloudSection"}
+              data-plasmic-override={overrides.logoCloudSection}
+              className={classNames("__wab_instance", sty.logoCloudSection)}
             >
-              {"Powering global organizations"}
-            </h2>
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__mYjn0)}
-            >
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__gdwV)}
-                displayHeight={"48px"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"none"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                src={{
-                  src: "/plasmic/daply_landing/images/gltLogoSample1Png.png",
-                  fullWidth: 479,
-                  fullHeight: 141,
-                  aspectRatio: undefined
-                }}
-              />
-
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__jq00)}
-                displayHeight={"48px"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"none"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                src={{
-                  src: "/plasmic/daply_landing/images/schooltubeCsl1Png.png",
-                  fullWidth: 612,
-                  fullHeight: 140,
-                  aspectRatio: undefined
-                }}
-              />
-
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__vvhap)}
-                displayHeight={"48px"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"none"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                src={{
-                  src: "/plasmic/daply_landing/images/visionz1Png3.png",
-                  fullWidth: 519,
-                  fullHeight: 282,
-                  aspectRatio: undefined
-                }}
-              />
-
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__eiAqk)}
-                displayHeight={"48px"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"none"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                src={{
-                  src: "/plasmic/daply_landing/images/lnUpIconWhiteGreen1Png.png",
-                  fullWidth: 221,
-                  fullHeight: 127,
-                  aspectRatio: undefined
-                }}
-              />
-            </Stack__>
-          </Section>
-          <Section
-            data-plasmic-name={"faqSection"}
-            data-plasmic-override={overrides.faqSection}
-            background={"white"}
-            className={classNames("__wab_instance", sty.faqSection)}
-          >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__k1HeW)}
-            >
-              <div className={classNames(projectcss.all, sty.freeBox__r44H5)}>
-                <h2
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h2,
-                    projectcss.__wab_text,
-                    sty.h2__pdvtb
-                  )}
-                >
-                  {"Common Questions"}
-                </h2>
-              </div>
-            </Stack__>
-            {(() => {
-              const child$Props = {
-                activeKey: generateStateValueProp($state, [
-                  "accordion2",
-                  "activePanelId"
-                ]),
-                bordered: false,
-                className: classNames("__wab_instance", sty.accordion2),
-                defaultActiveKey: "1",
-                disabled: false,
-                expandIconPosition: "start",
-                ghost: false,
-                items: (
-                  <React.Fragment>
-                    <AntdAccordionItem
-                      className={classNames(
-                        "__wab_instance",
-                        sty.accordionItem__oJeGa
-                      )}
-                      id={1}
-                      label2={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__ckD3O
-                          )}
-                        >
-                          {"What types of content can we publish?"}
-                        </div>
-                      }
-                      showArrow={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__n2QXn
-                        )}
-                      >
-                        {"First Children"}
-                      </div>
-                    </AntdAccordionItem>
-                    <AntdAccordionItem
-                      className={classNames(
-                        "__wab_instance",
-                        sty.accordionItem___8W7LJ
-                      )}
-                      id={2}
-                      label2={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__aisrO
-                          )}
-                        >
-                          {"How do I get started?"}
-                        </div>
-                      }
-                      showArrow={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__kheq5
-                        )}
-                      >
-                        {"Second Children"}
-                      </div>
-                    </AntdAccordionItem>
-                    <AntdAccordionItem
-                      className={classNames(
-                        "__wab_instance",
-                        sty.accordionItem__kp5HB
-                      )}
-                      id={2}
-                      label2={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__ydK6A
-                          )}
-                        >
-                          {"How much content can I produce?"}
-                        </div>
-                      }
-                      showArrow={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__jSJmB
-                        )}
-                      >
-                        {"Second Children"}
-                      </div>
-                    </AntdAccordionItem>
-                    <AntdAccordionItem
-                      className={classNames(
-                        "__wab_instance",
-                        sty.accordionItem__i2XPx
-                      )}
-                      id={2}
-                      label2={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__vVby
-                          )}
-                        >
-                          {"What are the benefits of Daply?"}
-                        </div>
-                      }
-                      showArrow={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__hUwsH
-                        )}
-                      >
-                        {"Second Children"}
-                      </div>
-                    </AntdAccordionItem>
-                  </React.Fragment>
-                ),
-                onChange: generateStateOnChangePropForCodeComponents(
-                  $state,
-                  "activePanelId",
-                  ["accordion2", "activePanelId"],
-                  AntdAccordion_Helpers
-                ),
-                size: "middle"
-              };
-              initializeCodeComponentStates(
-                $state,
-                [
-                  {
-                    name: "activePanelId",
-                    plasmicStateName: "accordion2.activePanelId"
-                  }
-                ],
-                [],
-                AntdAccordion_Helpers ?? {},
-                child$Props
-              );
-
-              return (
-                <AntdAccordion
-                  data-plasmic-name={"accordion2"}
-                  data-plasmic-override={overrides.accordion2}
-                  {...child$Props}
+              <h2
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h2,
+                  projectcss.__wab_text,
+                  sty.h2__akQen
+                )}
+              >
+                {"Daply Hubs powers global organizations"}
+              </h2>
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__mYjn0)}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__gdwV)}
+                  displayHeight={"48px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"none"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  src={{
+                    src: "/plasmic/daply_landing/images/gltLogoSample1Png.png",
+                    fullWidth: 479,
+                    fullHeight: 141,
+                    aspectRatio: undefined
+                  }}
                 />
-              );
-            })()}
-          </Section>
+
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__jq00)}
+                  displayHeight={"48px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"none"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  src={{
+                    src: "/plasmic/daply_landing/images/schooltubeCsl1Png.png",
+                    fullWidth: 612,
+                    fullHeight: 140,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__vvhap)}
+                  displayHeight={"48px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"none"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  src={{
+                    src: "/plasmic/daply_landing/images/visionz1Png3.png",
+                    fullWidth: 519,
+                    fullHeight: 282,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__eiAqk)}
+                  displayHeight={"48px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"none"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  src={{
+                    src: "/plasmic/daply_landing/images/lnUpIconWhiteGreen1Png.png",
+                    fullWidth: 221,
+                    fullHeight: 127,
+                    aspectRatio: undefined
+                  }}
+                />
+              </Stack__>
+              <PlasmicImg__
+                alt={"Daply Hubs for Publishers"}
+                className={classNames(sty.img__zqqaK)}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "258px"
+                    : "478px"
+                }
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/daply_landing/images/daplyHubOverviewpng.png",
+                  fullWidth: 1339,
+                  fullHeight: 596,
+                  aspectRatio: undefined
+                }}
+              />
+            </Section>
+            <Section
+              data-plasmic-name={"faqSection"}
+              data-plasmic-override={overrides.faqSection}
+              background={"white"}
+              className={classNames("__wab_instance", sty.faqSection)}
+            >
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__k1HeW)}
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__r44H5)}>
+                  <h2
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2__pdvtb
+                    )}
+                  >
+                    {"Common Questions"}
+                  </h2>
+                </div>
+              </Stack__>
+              {(() => {
+                const child$Props = {
+                  activeKey: generateStateValueProp($state, [
+                    "accordion2",
+                    "activePanelId"
+                  ]),
+                  bordered: false,
+                  className: classNames("__wab_instance", sty.accordion2),
+                  defaultActiveKey: ``,
+                  disabled: false,
+                  expandIconPosition: "start",
+                  ghost: false,
+                  items: (
+                    <React.Fragment>
+                      <AntdAccordionItem
+                        className={classNames(
+                          "__wab_instance",
+                          sty.accordionItem__oJeGa
+                        )}
+                        id={1}
+                        label2={
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__ckD3O
+                            )}
+                          >
+                            {
+                              "What services does Daply Hubs have for publishers?"
+                            }
+                          </div>
+                        }
+                        showArrow={true}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__n2QXn
+                          )}
+                        >
+                          {
+                            "You can publish text, video and audio content with Daply. Our platform is perfect for publshers with a wide variety of publishing media types. "
+                          }
+                        </div>
+                      </AntdAccordionItem>
+                      <AntdAccordionItem
+                        className={classNames(
+                          "__wab_instance",
+                          sty.accordionItem___8W7LJ
+                        )}
+                        id={2}
+                        label2={
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__aisrO
+                            )}
+                          >
+                            {"How do I get started?"}
+                          </div>
+                        }
+                        showArrow={true}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__kheq5
+                          )}
+                        >
+                          {
+                            "Getting started with Daply is easy. Here's a breakdown of how we get yout CMS  started:"
+                          }
+                        </div>
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__lRp2K)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"100%"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/daply_landing/images/getStartedpng.png",
+                            fullWidth: 1786,
+                            fullHeight: 439,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </AntdAccordionItem>
+                      <AntdAccordionItem
+                        className={classNames(
+                          "__wab_instance",
+                          sty.accordionItem__kp5HB
+                        )}
+                        id={"3"}
+                        label2={
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__ydK6A
+                            )}
+                          >
+                            {"How much content can I produce?"}
+                          </div>
+                        }
+                        showArrow={true}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__jSJmB
+                          )}
+                        >
+                          {
+                            "Our can scale to your publishing needs. Wether you'd like to produce 1,000 to 1,000,000 CMS items per day. "
+                          }
+                        </div>
+                      </AntdAccordionItem>
+                      <AntdAccordionItem
+                        className={classNames(
+                          "__wab_instance",
+                          sty.accordionItem__i2XPx
+                        )}
+                        id={"4"}
+                        label2={
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__vVby
+                            )}
+                          >
+                            {"What are the benefits of Daply?"}
+                          </div>
+                        }
+                        showArrow={true}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__hUwsH
+                          )}
+                        >
+                          {
+                            "Daply makes it easy to scale your publishing with AI powered content production. Daply drives more visitors to your CMS, and drives more Ad revenue and business opportunities to your business. "
+                          }
+                        </div>
+                      </AntdAccordionItem>
+                    </React.Fragment>
+                  ),
+                  onChange: generateStateOnChangePropForCodeComponents(
+                    $state,
+                    "activePanelId",
+                    ["accordion2", "activePanelId"],
+                    AntdAccordion_Helpers
+                  ),
+                  size: "middle"
+                };
+                initializeCodeComponentStates(
+                  $state,
+                  [
+                    {
+                      name: "activePanelId",
+                      plasmicStateName: "accordion2.activePanelId"
+                    }
+                  ],
+                  [],
+                  AntdAccordion_Helpers ?? {},
+                  child$Props
+                );
+
+                return (
+                  <AntdAccordion
+                    data-plasmic-name={"accordion2"}
+                    data-plasmic-override={overrides.accordion2}
+                    {...child$Props}
+                  />
+                );
+              })()}
+            </Section>
+          </div>
           <FooterSection
             data-plasmic-name={"footerSection"}
             data-plasmic-override={overrides.footerSection}
